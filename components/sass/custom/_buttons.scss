@@ -1,10 +1,60 @@
-/*buttons*/
+//*
+//*
+//*
+//*
+//* Buttons Styles
+//*
+//*
+//*
 
-.btn{
-    background:transparent;
-    border-radius:0;
-    border:0;
-    font-family: 'Montserrat', sans-serif;
+//colors
+$white: white;
+$color_mine_shaft_approx: #333;
+$color_mercury_approx: #e6e6e6;
+$color_shark_approx: #282828;
+
+//fonts
+$font_0: Montserrat;
+$font_1: sans-serif;
+
+//@extend-elements
+//original selectors
+//.btn:after, .btn:before
+%extend_1 {
+    //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all .2s ease 0s;
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    background: $white;
+}
+
+//original selectors
+//.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default
+%extend_2 {
+    color: $color_mine_shaft_approx;
+    background-color: $color_mercury_approx;
+    border-color: $white;
+}
+
+//original selectors
+//.btn:active, .btn.active
+%extend_3 {
+    background-image: none;
+    outline: 0;
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+}
+
+
+.btn {
+    background: transparent;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border: 0;
+    font-family: $font_0, $font_1;
     font-weight: 700;
     text-transform: uppercase;
     position: relative;
@@ -14,81 +64,72 @@
     letter-spacing: .2em;
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
-
     outline: 1px solid transparent;
-
-    -webkit-transition: all .5s ease .25s;
+    //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all .5s ease .25s;
+    &:after {
+        @extend %extend_1;
+        right: -8px;
+    }
+    &:before {
+        @extend %extend_1;
+        left: -8px;
+    }
+    &:active {
+        @extend %extend_3;
+    }
+    &.active {
+        @extend %extend_3;
+        &:focus {
+            outline: 0;
+        }
+    }
+    &:focus {
+        outline: 0;
+    }
 }
-
-
-.btn-default{
+.btn-default {
     display: inline-block;
-    color: white;
-
+    color: $white;
+    &:hover {
+        border-color: $white;
+        @extend %extend_2;
+    }
+    &:focus {
+        @extend %extend_2;
+    }
+    &:active {
+        @extend %extend_2;
+    }
+    &.active {
+        @extend %extend_2;
+    }
 }
-
-.btn-default:hover{
-    border-color: white;
+.btn:hover {
+    &:before {
+        left: 0;
+    }
+    &:after {
+        right: 0;
+    }
 }
-
-.btn:after, .btn:before {
-    -webkit-transition: all .2s ease 0s;
-    transition: all .2s ease 0s;
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    top: 0;
-    background: white;
+.btn-black {
+    color: $color_shark_approx;
+    &:after {
+        background: $color_shark_approx;
+    }
+    &:before {
+        background: $color_shark_approx;
+    }
+    &:hover {
+        color: $white;
+        background-color: $color_shark_approx;
+        border-color: $color_shark_approx;
+    }
 }
-
-
-
-.btn:before {
-    left: -8px;
+.open>.dropdown-toggle.btn-default {
+    @extend %extend_2;
 }
-
-.btn:hover:before {
-    left: 0;
-}
-
-.btn:after {
-    right: -8px;
-}
-
-.btn:hover:after {
-    right: 0;
-}
-
-
-
-.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
-    color: #333;
-    background-color: #e6e6e6;
-    border-color: white;
-}
-.btn:active, .btn.active {
-    background-image: none;
+.btn:active:focus {
     outline: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-.btn:focus, .btn:active:focus, .btn.active:focus {
-    outline: 0;
-}
-
-.btn-black{
-    color:#282828;
-}
-
-.btn-black:after, .btn-black:before {
-    background: #282828;
-}
-
-.btn-black:hover {
-    color: white;
-    background-color: #282828;
-    border-color: #282828;
 }

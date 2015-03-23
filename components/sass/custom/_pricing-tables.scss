@@ -1,43 +1,42 @@
-/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
-/*<!--Pricing Tables -->*/
-/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+//*
+//*
+//*
+//*
+//* Pricing-Tavbles Styles
+//*
+//*
+//*
 
-#pricing{
-    background-color:#f4f4f4;
+//colors
+$wild_sand: #f4f4f4;
+$black:  black;
+
+#pricing {
+    background-color: $wild_sand;
 }
-
-
-.tableWrapper{
-    padding:60px;
-    border: solid 10px black;
+.tableWrapper {
+    padding: 60px;
+    border: solid 10px $black;
+    .separator {
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .subscriptionName h2 {
+        letter-spacing: 0;
+    }
 }
-
-.tableWrapper .separator{
-    padding:20px;
-    margin-top:20px;
-    margin-bottom:20px;
+.subscriptionPrice {
+    padding-bottom: 10px;
+    h2 {
+        letter-spacing: 0;
+        display: inline;
+    }
+    p {
+        display: inline;
+    }
 }
-
-.tableWrapper .subscriptionName h2{
-    letter-spacing:0;
-}
-
-.subscriptionList ul{
-    list-style:none;
-    padding:0;
-}
-
-.subscriptionPrice{
-    padding-bottom:10px;
-}
-
-
-.subscriptionPrice h2{
-    letter-spacing:0;
-}
-
-
-.subscriptionPrice h2,
-.subscriptionPrice p{
-    display:inline;
+.subscriptionList ul {
+    list-style: none;
+    padding: 0;
 }

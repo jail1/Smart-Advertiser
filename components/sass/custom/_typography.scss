@@ -1,55 +1,69 @@
-/*TEXT STYLES*/
+//*
+//*
+//*
+//*
+//* Typography Styles
+//*
+//*
+//*
 
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Montserrat', sans-serif;
+//colors
+$color_gravel_approx: #4c4c4c;
+
+//fonts
+$font_0: Montserrat;
+$font_1: sans-serif;
+$font_2: Open Sans;
+
+h1 {
+    font-family: $font_0, $font_1;
     font-weight: 700;
-}
-
-h1{
-    font-size:50px;
+    font-size: 50px;
     text-transform: uppercase;
     letter-spacing: 20px;
 }
-
-h2{
-    font-size:30px;
+h2 {
+    font-family: $font_0, $font_1;
+    font-weight: 700;
+    font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 15px;
 }
-
-h3{
-
-    font-size:24px;
+h3 {
+    font-family: $font_0, $font_1;
+    font-weight: 700;
+    font-size: 24px;
     text-transform: uppercase;
-    letter-spacing:10px;
+    letter-spacing: 10px;
 }
-
-h4{
-    font-size:20px;
+h4 {
+    font-family: $font_0, $font_1;
+    font-weight: 700;
+    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 8px;
 }
-
-h5{
-    font-size:14px;
+h5 {
+    font-family: $font_0, $font_1;
+    font-weight: 700;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
-
-h6{
-    font-size:12px;
+h6 {
+    font-family: $font_0, $font_1;
+    font-weight: 700;
+    font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
-
 p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font_2, $font_1;
     font-weight: 300;
     font-size: 14px;
     line-height: 24px;
-    color: #4c4c4c;
-}
-
-p.bold{
-    font-weight:700;
+    color: $color_gravel_approx;
+    &.bold {
+        font-weight: 700;
+    }
 }
