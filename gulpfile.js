@@ -82,7 +82,7 @@ if(env === 'development') {
 				 	 'components/scripts/googleMapInit.js',
 				 	 'components/scripts/custom.js'],
 
- 	sassSources	  = ['components/sass/**/**/**/*.scss', 'components/sass/*.scss'],
+ 	sassSources	  = ['components/sass/**/**/**/*.scss', 'components/sass/*.scss', 'components/sass/**/*.scss', 'components/sass/**/**/*.scss'],
  	staticSources = [outputDir + '*.html', outputDir + 'pages/*.html'];
 
 // ##################################################################################################################################
@@ -159,6 +159,16 @@ gulp.task('images', function() {
 });
 
 // ##################################################################################################################################
+// Fonts Task
+// ##################################################################################################################################
+
+gulp.task('fonts', function() {
+	gulp.src('builds/development/fonts/*.*')
+		.pipe(gulpif(prod, gulp.dest('builds/production/fonts/')))
+		.pipe(connect.reload());
+});
+
+// ##################################################################################################################################
 // Watch Task
 // ##################################################################################################################################
 
@@ -167,6 +177,7 @@ gulp.task('watch', function() {
 	gulp.watch('components/sass/*.scss', ['compass']);
 	gulp.watch('builds/development/*.html', ['static']);
 	gulp.watch('builds/development/img/**/*.*', ['images']);
+	gulp.watch('builds/development/fonts/*.*', ['fonts']);
 });
 
 // ##################################################################################################################################
@@ -184,7 +195,7 @@ gulp.task('connect', function() {
 // Default Task
 // ##################################################################################################################################
 
-gulp.task('default', ['static', 'js-lint', 'js', 'compass', 'images', 'connect', 'watch']); 
+gulp.task('default', ['static', 'js-lint', 'js', 'compass', 'images', 'fonts', 'connect', 'watch']); 
 // Process all of this. Yell 'gulp' in console.
 
 // ##################################################################################################################################
