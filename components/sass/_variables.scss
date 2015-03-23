@@ -1,4 +1,7 @@
 //*
+//*
+//* Author: Iacob Silviu - Iulian
+//*
 //* Fonts Stored is sasy vars.
 //*
 
@@ -78,6 +81,13 @@ $black_80: rgba(0,0,0,0.8);
 //colros under Typography Appendix
 $paragraphs: #4c4c4c;
 
+//colors under Preloader Appendix
+$color_mosque_approx: #046674;
+$color_alto_approx: #ddd;
+
+//colors Responsive
+$color_mercury_approx: #e7e7e7;
+$black_90: rgba(0, 0, 0, 0.9);
 
 //*
 //* Links (mostly, if not all are image paths! XD)
@@ -91,3 +101,6 @@ $background_service: url(img/backgroundService.jpg);
 
 //links under Welcome Separator Section
 $gradient: url(img/gradient.png);
+
+//links under Owl-Carousel Styles
+$grabbing_png: url(img/grabbing.png);
