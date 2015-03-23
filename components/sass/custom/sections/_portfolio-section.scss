@@ -17,8 +17,8 @@
 }
 
 .portfolioIntro h2 span{
-    padding:25px 50px;
-    border: solid 10px #282828;
+    padding: $portfolio_intro_padding;
+    border: $portfolio_intro_border;
 }
 
 .portfolioFilters {
@@ -27,7 +27,7 @@
 }
 
 .grayBackground {
-    background-color: #f8f8f8;
+    background-color: $portfolio_background;
 }
 
 .heightItem{
@@ -44,20 +44,20 @@
 
 #owl-item .owl-buttons{
     display:inline-block;
-
     position:relative;
-
 }
+
 #owl-item .owl-prev, .owl-next{
-    display:inline-block;}
+    display:inline-block;
+}
 
-.itemNav{
-
+.itemNav {
     margin:10px;
     padding:5px 10px;
     background:#282828;
     color: $white;
 }
+
 #owl-item .owl-controls {
     text-align: center;
     margin-top:-70px;

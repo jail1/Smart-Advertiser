@@ -293,10 +293,20 @@ iframe{border:0;}
 
 
 
-/*/featured works*/
+// #
+// #
+// #    Featured works XD
+// #
+// #
+// #
+
+
+$contact_featured_works_background: $white;
+$contact_featured_works_nav_background: #282828;
+$contact_featured_works_nav_color: $white;
 
 #featured-works{
-    background:white;
+    background: $contact_featured_works_background;
 }
 
 .featureWrapper{
@@ -314,17 +324,15 @@ iframe{border:0;}
     display:inline-block;}
 
 .featuredNav{
-
     margin:10px;
     padding:5px 10px;
-    background:#282828;
-    color:white;
+    background: $contact_featured_works_nav_background;
+    color: $contact_featured_works_nav_color;
 }
 
 
-/*pages*/
 
 ul, ol {
-line-height: 24px;
+    line-height: 24px;
 }
 

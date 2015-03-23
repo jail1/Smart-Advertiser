@@ -24,7 +24,8 @@ $links_text_decoration: none;
 
 	//Tools
 
-$sectionIntro_border: solid 10px #282828;
+$sectionIntro_border: solid 6px #a60303;
+$sectionIntro_padding: 20px 40px;
 $preloader_logo_min_width: 200px;
 $preloader_logo_max_height: 300px;
 $preloader_logo_width: 15%;
@@ -48,13 +49,13 @@ $general_btn_ttransform: uppercase;
 $general_btn_border_top: 2px solid transparent;
 $general_btn_border_bottom: 2px solid transparent;
 
-$btn_default_background: #e6e6e6;
-$btn_default_color: #333;
+$btn_default_background: #d90404;
+$btn_default_color: #d90404;
 
-$btn_black_background: #e6e6e6;
-$btn_black_color: #282828;
+$btn_black_background: #a60303;
+$btn_black_color: #a60303;
 
-$btn_transition_afterandbefore: all .2s ease 0s;
+$btn_transition_afterandbefore: all .4s ease 0.2s;
 
 	//Navbar
 
@@ -65,13 +66,13 @@ $navbar_padding_left: 50px;
 $navbar_padding_right: 50px;
 
 $navbar_ttransform: uppercase;
-$navbar_color: $white;
-$navbar_links: #d5d5d5;
+$navbar_color: #f24405;
+$navbar_links: #a60303;
 
 $navbar_event_background: transparent;
 $navbar_event_color: #d5d5d5;
 
-$affix_background: #282828;
+$affix_background: rgba(89, 2, 2, .8);
 
 $dropdown_background: #323232;
 $dropdown_align: left;
@@ -122,15 +123,22 @@ $white-overlay-imgurl: url("../img/gradient.png");
 
 	//About Section
 
+$about_progress_background: #f69e7e;
+$about_progress_border: 3px solid #590202;
+$about_progress_border_rad: 1px;
+$progress_bar_background: #f24405;
 
-$about-background: $white;
-$about-icon-color: #f5f5f5;
+$about_background: rgba(255, 255, 255, 0.7);
+$about_icon-color: #f5f5f5;
 
-$progress-bar-transition: width .6s ease;
-$progress-bar-color: #ffffff;
+$progress_bar_transition: width .6s ease;
+$progress_bar_color: #ffffff;
 
 	//Portfolio Section
 
+$portfolio_intro_border: solid 5px #282828;
+$portfolio_intro_padding: 25px 50px;
+$portfolio_background: #f8f8f8;
 $portfolio-intro-url: 'img/portfolioIntro.jpg';
 $gallery-background: #4c4c4c;
 

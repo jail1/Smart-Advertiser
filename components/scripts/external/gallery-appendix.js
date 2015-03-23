@@ -1,4 +1,5 @@
- (function() {
+// featured gallery overlay
+            (function() {
                 var triggerBttn = document.getElementById( 'trigger-overlay' ),
                         triggerBttnTwo = document.getElementById( 'trigger-overlay-two' ),
                         triggerBttnThree = document.getElementById( 'trigger-overlay-three' ),
