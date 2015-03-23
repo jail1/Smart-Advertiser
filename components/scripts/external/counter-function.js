@@ -1,5 +1,5 @@
 // #
-// # Just a little counter function.
+// # Just a little counter function by je. Minified and beautified for security reasons.
 // #
 
 (function(e) {
