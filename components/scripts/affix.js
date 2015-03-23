@@ -1,3 +1,5 @@
+var jQuery = $ = require('jquery');
+
 /* ========================================================================
  * Bootstrap: affix.js v3.3.4
  * http://getbootstrap.com/javascript/#affix

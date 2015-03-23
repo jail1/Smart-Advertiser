@@ -1,11 +1,10 @@
 {
-  "name": "?",
-  "version": "0.0.1",
-  "homepage": "?",
+  "name": "smart-advertising",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jail1/Smart-Advertiser",
   "authors": [
     "BlissTerra <iuliano2k@gmail.com>"
   ],
-  "description": "?",
   "license": "MIT",
   "private": true,
   "ignore": [
@@ -16,9 +15,11 @@
     "tests"
   ],
   "dependencies": {
-
+    "jquery-backstretch": "~2.0.4"
   },
   "devDependencies": {
-
+    "classie": "~1.0.1",
+    "images-loaded": "~3.1.8",
+    "owl-carousel": "~1.3.2"
   }
 }

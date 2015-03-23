@@ -43,8 +43,7 @@ if(env === 'development') {
 // File locations
 // ##################################################################################################################################
 
-    jsSources	  = ['components/scripts/modernizr.custom.js'
-				 	 'components/scripts/scripts.js'
+    jsSources	  = [ // Bootstrap JavaScript components.
 					 'components/scripts/affix.js', 
 					 'components/scripts/alert.js',
 				 	 'components/scripts/button.js',
@@ -57,11 +56,21 @@ if(env === 'development') {
  				 	 'components/scripts/tab.js',
 				 	 'components/scripts/tooltip.js',
 				 	 'components/scripts/tranzition.js',
+			 	 	 'components/scripts/bootstrap-sprockets.js',
+
+			 	 	 // External JavaScript components.
+			 	 	 'components/scripts/external/jquery.backstretch.js',
+			 	 	 'components/scripts/external/imagesloaded.pkgd.js',
+			 	 	 'components/scripts/external/classie.js',
+			 	 	 'components/scritps/external/owl.carousel.js'
+
+		 	 	 	 // Project JavaScript components.
  				 	 'components/scripts/overlay.js',
 				 	 'components/scripts/preloader.js',
 				 	 'components/scripts/googleMapInit.js',
 				 	 'components/scripts/custom.js'],
- 	sassSources	  = ['components/sass/**/*.scss'],
+
+ 	sassSources	  = ['components/sass/**/**/**/*.scss'],
  	staticSources = [outputDir + '*.html', outputDir + 'pages/*.html'];
 
 // ##################################################################################################################################
