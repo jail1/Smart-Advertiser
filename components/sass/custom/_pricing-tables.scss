@@ -1,0 +1,43 @@
+/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+/*<!--Pricing Tables -->*/
+/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+
+#pricing{
+    background-color:#f4f4f4;
+}
+
+
+.tableWrapper{
+    padding:60px;
+    border: solid 10px black;
+}
+
+.tableWrapper .separator{
+    padding:20px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.tableWrapper .subscriptionName h2{
+    letter-spacing:0;
+}
+
+.subscriptionList ul{
+    list-style:none;
+    padding:0;
+}
+
+.subscriptionPrice{
+    padding-bottom:10px;
+}
+
+
+.subscriptionPrice h2{
+    letter-spacing:0;
+}
+
+
+.subscriptionPrice h2,
+.subscriptionPrice p{
+    display:inline;
+}

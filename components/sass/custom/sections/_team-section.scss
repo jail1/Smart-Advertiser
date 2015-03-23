@@ -1,0 +1,78 @@
+/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+/*<!--Team -->*/
+/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+
+
+#team {
+    background:white;
+}
+
+#team .container{
+    padding-bottom:0;
+}
+
+#team .owl-buttons div {
+    padding: 5px 9px;
+}
+
+#team .owl-buttons i{
+    margin-top: 2px;
+}
+
+#team .owl-buttons div {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#team .owl-buttons .owl-prev{
+    left: 10px;
+
+}
+
+#team .owl-buttons .owl-next{
+    right: 10px;
+}
+
+#owl-team{
+    position:relative;
+}
+
+.memberParagraph{
+    padding-right:40px;
+}
+
+.memberDescription h2{
+    letter-spacing:0;
+}
+
+.memberDescription .position{
+    margin-top:10px;
+    margin-bottom:40px;
+}
+
+.memberDescription .position span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 3px;
+    line-height: 20px;
+    text-transform: uppercase;
+    border: solid 1px black;
+    padding: 6px;
+}
+
+.teamSocial{
+    margin-top:20px;
+}
+
+.teamSocial a{
+    padding:7px;
+    font-size:18px;
+}
+
+.teamSocial a:first-child{
+    padding-left:0px;
+}

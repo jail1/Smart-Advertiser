@@ -1,0 +1,145 @@
+/*shortcodes */
+.nav-tabs {
+    border-bottom: 3px solid black;
+}
+
+.nav-tabs>li>a {
+    border-radius: 0;
+    border-bottom-color: transparent;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    border: 3px solid black;
+    border-bottom-color: transparent;
+    margin-bottom:-2px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #fff;
+    background-color: #282828;
+}
+
+.nav-pills>li>a {
+    border-radius: 0px;
+    font-family:'Montserrat', sans-serif;
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:900;
+}
+
+.tab-content{
+
+    padding:10px;
+}
+
+.panel-heading {
+    padding: 18px;
+}
+
+.panel-group .panel {
+    border-radius: 0;
+}
+
+.panel {
+    border: 2px solid transparent;
+    border-radius: 0px;
+}
+.panel-title{
+    font-size: 12px;
+}
+
+
+.panel-default {
+    border-color: black;
+}
+
+.buttons{
+    padding:30px;
+}
+
+
+.buttons button{
+    margin:30px;
+}
+
+.btn-primary{
+    color:#357ebd;
+}
+
+.btn-primary:after, .btn-primary:before {
+    background: #357ebd;
+}
+
+.btn-success{
+    color:#4cae4c;
+}
+
+.btn-success:after, .btn-success:before {
+    background: #4cae4c;
+}
+
+.btn-info{
+    color:#46b8da;
+}
+
+.btn-info:after, .btn-info:before {
+    background: #46b8da;
+}
+.btn-warning{
+    color:#eea236
+}
+
+.btn-warning:after, .btn-warning:before {
+    background: #eea236;
+}
+
+
+.btn-danger{
+    color:#d43f3a;
+}
+
+.btn-danger:after, .btn-danger:before {
+    background: #d43f3a;
+}
+
+.alert {
+    border-radius: 0px;
+}
+
+#callToAction{
+    background:#282828;
+}
+
+#callToAction .container{
+    padding-top:75px;
+    padding-bottom:75px;
+}
+
+#callToAction h4{
+    color:white;
+    letter-spacing:2px;
+}
+
+#callToAction p{
+    color: #d5d5d5;
+    padding-top:15px;
+    padding-bottom:15px;
+
+}
+
+#callToAction h4{
+    color:white;
+    letter-spacing:2px;
+}
+
+.dropcap {
+    float: left;
+    color: inherit;
+    font-size: 50px;
+    line-height: 40px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}

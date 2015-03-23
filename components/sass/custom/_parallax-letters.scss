@@ -1,0 +1,28 @@
+/*parallax letters*/
+
+
+.parallaxLetter{
+    position:absolute;
+    font-size:300px;
+    color:#F9F9F9;
+    z-index:1;
+    width: 200px;
+    height: 300px;
+}
+
+
+.letter1{
+    right:20%;
+}
+
+.letter2{
+    left:20%;
+}
+
+.letter3{
+    right:15%;
+}
+
+.letter4{
+    left:10%;
+}

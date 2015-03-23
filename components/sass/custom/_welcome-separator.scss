@@ -1,0 +1,55 @@
+/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+/*<!--Welcome Separator -->*/
+/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+
+#welcome-separator{
+    background-color:white;
+}
+
+#welcome-separator .col-md-7,
+#welcome-separator .container-fluid{
+    padding:0;
+}
+
+#welcome-separator .separator{
+    width: 120px;
+    max-width: 120px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+#welcome-separator .image{
+    height:500px;
+    overflow:hidden;
+}
+
+#welcome-separator .image img{
+    height: 100%;
+}
+
+
+.whiteOverlay{
+    background: transparent url("img/gradient.png") bottom right repeat-y;
+    bottom: 0;
+    height: 500px;
+    right: 0;
+    position: absolute;
+    width: 500px;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    z-index:4
+}
+
+.welcomeLogo{
+    width:100px;
+}
+
+.textOverlay{
+    padding-bottom:100px;
+    padding-top:100px;
+    margin-left:-200px;
+    z-index:6;
+}

@@ -1,0 +1,94 @@
+/*buttons*/
+
+.btn{
+    background:transparent;
+    border-radius:0;
+    border:0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    line-height: 40px;
+    padding: 0 40px;
+    font-size: 12px;
+    letter-spacing: .2em;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+
+    outline: 1px solid transparent;
+
+    -webkit-transition: all .5s ease .25s;
+    transition: all .5s ease .25s;
+}
+
+
+.btn-default{
+    display: inline-block;
+    color: white;
+
+}
+
+.btn-default:hover{
+    border-color: white;
+}
+
+.btn:after, .btn:before {
+    -webkit-transition: all .2s ease 0s;
+    transition: all .2s ease 0s;
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    background: white;
+}
+
+
+
+.btn:before {
+    left: -8px;
+}
+
+.btn:hover:before {
+    left: 0;
+}
+
+.btn:after {
+    right: -8px;
+}
+
+.btn:hover:after {
+    right: 0;
+}
+
+
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: white;
+}
+.btn:active, .btn.active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0;
+}
+
+.btn-black{
+    color:#282828;
+}
+
+.btn-black:after, .btn-black:before {
+    background: #282828;
+}
+
+.btn-black:hover {
+    color: white;
+    background-color: #282828;
+    border-color: #282828;
+}
