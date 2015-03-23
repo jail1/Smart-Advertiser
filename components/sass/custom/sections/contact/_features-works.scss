@@ -1,0 +1,39 @@
+//*
+//*
+//*
+//*
+//* Contact-Section Featured Works Styles
+//*
+//*
+//*
+
+//colors
+$white: white;
+$color_shark_approx: #282828;
+
+#featured-works {
+	background: $white;
+}
+.featureWrapper {
+	padding: 10px;
+	.caption-heading {
+		padding: 10px;
+	}
+}
+#owl-featured {
+	.owl-buttons {
+		display: inline-block;
+	}
+	.owl-prev {
+		display: inline-block;
+	}
+}
+.owl-next {
+	display: inline-block;
+}
+.featuredNav {
+	margin: 10px;
+	padding: 5px 10px;
+	background: $color_shark_approx;
+	color: $white;
+}

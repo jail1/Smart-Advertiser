@@ -1,0 +1,51 @@
+//*
+//*
+//*
+//*
+//* Portfolio-Section Footer Isotope Styles
+//*
+//*
+//*
+
+//colors
+$color_gravel_approx: #4c4c4c;
+
+.gallery {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .gallery-inner {
+        width: 33.333%;
+        float: left;
+        height: auto;
+        background: $color_gravel_approx;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+    }
+    .grid-sizer {
+        width: 33.333%;
+    }
+    .grid-sizer-two-columns {
+        width: 50%;
+    }
+    .two-columns {
+        width: 50%;
+    }
+    .grid-sizer-four-columns {
+        width: 25%;
+    }
+    .four-columns {
+        width: 25%;
+    }
+}
+.galleryImage {
+    width: 100%;
+    height: auto;
+}
+.four-columns h4 {
+    letter-spacing: 1px;
+}

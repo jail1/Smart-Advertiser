@@ -1,73 +1,68 @@
-/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
-/*<!--Services -->*/
-/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+//*
+//*
+//*
+//*
+//* Testimonials-Section Styles
+//*
+//*
+//*
 
-.serviceBox{
-    width:50%;
-    height:400px;
-    position:relative;
-    float:left;
-    padding:50px;
+//colors
+$color_shark_approx: #282828;
+$white: white;
+
+//urls
+$url_0: url(img/backgroundService.jpg);
+
+.serviceBox {
+    width: 50%;
+    height: 400px;
+    position: relative;
+    float: left;
+    padding: 50px;
     z-index: 2;
+    .separator {
+        width: 100px;
+        max-width: 100px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    h2 {
+        padding-top: 140px;
+        margin-top: 0;
+        span {
+            padding: 25px 50px;
+            border: solid 10px $color_shark_approx;
+        }
+    }
+    i {
+        font-size: 9em;
+    }
 }
-
-.serviceBox .separator {
-    width: 100px;
-    max-width: 100px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
-.serviceBox h2 {
-    padding-top:140px;
-    margin-top:0;
-}
-
-.serviceBox h2 span{
-    padding:25px 50px;
-    border: solid 10px #282828;
-}
-
-.serviceBox i{
-    font-size:9em;
-}
-
-.introServiceBox{
-    position:relative;
-    z-index:2;
-    background:url('img/backgroundService.jpg') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+.introServiceBox {
+    position: relative;
+    z-index: 2;
+    background: $url_0 no-repeat center center;
     background-size: cover;
     background-position: 50% 0, 50% 0, 50% 0, 50% 0;
     background-repeat: repeat, repeat, repeat ,no-repeat;
 }
-
-
-.whiteBox{
-    background:white;
+.whiteBox {
+    background: $white;
 }
-
-.blackBox{
-    background:#282828;
+.blackBox {
+    background: $color_shark_approx;
+    i {
+        color: $white;
+    }
 }
-
-.blackBox i{
-    color:white;
+#servicesSimple {
+    background: $white;
 }
-
-
-
-#servicesSimple{
-    background:white;
+.serviceIconWrapper {
+    padding: 20px;
 }
-
-.serviceIconWrapper{
-    padding:20px;
-}
-
-.serviceIcon{
+.serviceIcon {
     width: 40px;
     height: 40px;
     text-align: center;
@@ -76,31 +71,22 @@
     line-height: 40px;
     margin-top: 3px;
     float: left;
+    //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all .3s ease-in-out;
 }
-
-.simpleServiceContent{
+.simpleServiceContent {
     margin-left: 60px;
+    h4 {
+        letter-spacing: 5px;
+    }
 }
-
-.simpleServiceContent h4{
-    letter-spacing:5px;
-}
-
-
-.serviceIconWrapper{
-    padding:20px;
-}
-
-.serviceIcon2{
-
+.serviceIcon2 {
     font-size: 40px;
     line-height: 40px;
+    //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all .3s ease-in-out;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
-
-
-.simpleServiceContent2 h4{
-    letter-spacing:4px;
+.simpleServiceContent2 h4 {
+    letter-spacing: 4px;
 }

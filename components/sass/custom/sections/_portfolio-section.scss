@@ -1,319 +1,136 @@
-/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
-/*<!--Portfolio -->*/
-/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+//*
+//*
+//*
+//*
+//* Portfolio Styles
+//*
+//*
+//*
 
 
-.portfolioIntro{
-    height:300px;
-}
+//colors
+$color_shark_approx: #282828;
+$color_rangoon_green_approx: #1d1d1d;
+$color_desert_storm_approx: #f8f8f8;
+$white: white;
+$black_100: rgba(0,0,0,1);
+$color_shark_70_approx: rgba(40, 40, 40, 0.70);
+$color_gravel_approx: #4c4c4c;
 
-.portfolioIntro h2 {
-    padding-top:120px;
-    margin-top:0;
-}
+//urls
+$url_0: url(img/portfolioIntro.jpg);
 
-.portfolioIntro h2 span{
-    padding:25px 50px;
-    border: solid 10px #282828;
-}
-
-.portfolioFilters {
-    height:150px;
-    background-color: #1d1d1d;
-}
-
-.grayBackground {
-    background-color: #f8f8f8;
-}
-
-.heightItem{
-    padding:45px;
-}
-
-#filters{
-    padding-top:30px;
-}
-
-#filters .btn{
-    margin:20px;
-}
-
-#owl-item .owl-buttons{
-    display:inline-block;
-
-    position:relative;
-
-}
-#owl-item .owl-prev, .owl-next{
-    display:inline-block;}
-
-.itemNav{
-
-    margin:10px;
-    padding:5px 10px;
-    background:#282828;
-    color:white;
-}
-#owl-item .owl-controls {
-    text-align: center;
-    margin-top:-70px;
-}
-
-
-.portfolioIntro{
-    position:relative;
-    z-index:2;
-    background:url('img/portfolioIntro.jpg') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+.portfolioIntro {
+    height: 300px;
+    position: relative;
+    z-index: 2;
+    background: $url_0 no-repeat center center;
     background-size: cover;
     background-position: 50% 0, 50% 0, 50% 0, 50% 0;
     background-repeat: repeat, repeat, repeat ,no-repeat;
+    h2 {
+        padding-top: 120px;
+        margin-top: 0;
+        span {
+            padding: 25px 50px;
+            border: solid 10px $color_shark_approx;
+        }
+    }
 }
-
-#portfolio .black-overlay{
-    background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+.portfolioFilters {
+    height: 150px;
+    background-color: $color_rangoon_green_approx;
 }
-
-#portfolio .container{
-    padding-top:100px;
-    padding-bottom:100px;
+.grayBackground {
+    background-color: $color_desert_storm_approx;
 }
-
-
+.heightItem {
+    padding: 45px;
+}
+#filters {
+    padding-top: 30px;
+    .btn {
+        margin: 20px;
+    }
+}
+#owl-item {
+    //This fucktard gave me a lot of trouble. Take care when modifying please 'smart' team ;).
+    .owl-buttons {
+        display: inline-block;
+        position: relative;
+    }
+    .owl-prev {
+        display: inline-block;
+    }
+    .owl-controls {
+        text-align: center;
+        margin-top: -70px;
+    }
+}
+.owl-next {
+    display: inline-block;
+}
+.itemNav {
+    margin: 10px;
+    padding: 5px 10px;
+    background: $color_shark_approx;
+    color: $white;
+}
+#portfolio {
+    .black-overlay {
+        background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0,$black_100 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 );
+    }
+    .container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        .gallery {
+            background-color: $white;
+        }
+    }
+}
 .gallery {
     max-width: 100%;
+    background: $color_gravel_approx;
+    min-height: 500px;
+}
+.gallery-inner {
+    .caption {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $color_shark_70_approx;
+    }
+    .caption-heading {
+        width: 100%;
+        height: 120px;
+        color: $white;
+        p {
+            color: $white;
+            font-size: 12px;
+            font-style: italic;
+        }
+    }
+    &:hover .caption {
+        opacity: 1;
+    }
+}
+.caption-heading {
+    .separator {
+        width: 100px;
+        max-width: 100px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .btn-default {
+        line-height: 30px;
+        font-size: 10px;
+        margin-top: 8px;
+    }
 }
 
-.gallery-inner .caption{
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(40, 40, 40, 0.70);
-    -webkit-transition: all 1s ease-in-out;
-
-}
-.gallery-inner:hover .caption{
-    opacity: 1;
-}
-
-.gallery-inner .caption-heading {
-    width:100%;
-    height:120px;
-}
-
-.caption-heading .separator{
-    width: 100px;
-    max-width: 100px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-}
-
-.caption-heading .btn-default {
-    line-height: 30px;
-    font-size:10px;
-    margin-top:8px;
-}
-
-.gallery-inner .caption-heading,
-.gallery-inner .caption-heading p{
-    color:white;
-}
-
-.gallery-inner .caption-heading p{
-    font-size:12px;
-    font-style:italic;
-}
-
-.gallery {
-    background: #4c4c4c;
-    min-height:500px;
-}
-
-#portfolio .container .gallery{
-    background-color:white;
-}
-
-/* ---- isotope ---- */
-/* clear fix */
-.gallery:after {
-    content: '';
-    display: block;
-    clear: both;
-
-}
-
-/* 5 columns, percentage width */
-.gallery .gallery-inner,
-.gallery .grid-sizer {
-    width: 33.333%;/* change here the column width */
-}
-
-.gallery .grid-sizer-two-columns,
-.gallery .two-columns{
-    width:50%;
-}
-
-.gallery .grid-sizer-four-columns,
-.gallery .four-columns{
-    width:25%;
-}
-
-.four-columns h4{
-    letter-spacing:1px;
-}
-
-
-
-
-
-.gallery .gallery-inner {
-    float: left;
-    height: auto;
-    background: #4c4c4c;
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin:0;
-}
-
-.galleryImage{
-    /*min-width:100%;*/
-    width: 100%;
-    height: auto;
-}
-
-
-
-/* Overlay style */
-.overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: white;
-    z-index:3000;
-    overflow-y: scroll;
-}
-
-.overlay-section{
-    position: static;
-}
-
-/* Effects */
-.overlay-slidedown {
-    visibility: hidden;
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-    -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
-    transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
-}
-
-.overlay-slidedown.open {
-    visibility: visible;
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-    -webkit-transition: -webkit-transform 0.4s ease-in-out;
-    transition: transform 0.4s ease-in-out;
-}
-
-
-
-.overlay-close img{
-    cursor:pointer;
-}
-
-.overlay-close{
-    padding:30px;
-}
-
-
-#singlePageIntro .container{
-    padding:100px;
-    padding-bottom:30px;
-}
-
-#singlePageContent .container{
-    padding:10px;
-}
-
-#singlePageIntro .separator{
-    margin-top:50px;
-    margin-bottom:20px;
-}
-
-.singleProjectInfo ul{
-    padding:20px;
-    list-style:none;
-    border-left:5px solid #282828;
-}
-
-.singleProjectInfo ul li p{
-    display:inline;
-}
-
-.singleImageWrapper{
-    padding-top:60px;
-}
-
-
-.singleImageWrapper .videoWrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
-    height: 0;
-}
-.singleImageWrapper .videoWrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* magnific popup effect */
-.mfp-fade.mfp-bg {
-    opacity: 0;
-
-    -webkit-transition: all 0.15s ease-out;
-    -moz-transition: all 0.15s ease-out;
-    transition: all 0.15s ease-out;
-}
-/* overlay animate in */
-.mfp-fade.mfp-bg.mfp-ready {
-    opacity: 0.8;
-}
-/* overlay animate out */
-.mfp-fade.mfp-bg.mfp-removing {
-    opacity: 0;
-}
-
-/* content at start */
-.mfp-fade.mfp-wrap .mfp-content {
-    opacity: 0;
-
-    -webkit-transition: all 0.15s ease-out;
-    -moz-transition: all 0.15s ease-out;
-    transition: all 0.15s ease-out;
-}
-/* content animate it */
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-    opacity: 1;
-}
-/* content animate out */
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-    opacity: 0;
-}
-/* end magnific popup effect */
+@import 'portfolio/isotope';
+@import 'portfolio/overlay';
+@import 'portfolio/effects';

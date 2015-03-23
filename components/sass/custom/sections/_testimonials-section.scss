@@ -1,37 +1,42 @@
-/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
-/*<!--Testimonials -->*/
-/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+//*
+//*
+//*
+//*
+//* Testimonials-Section Styles
+//*
+//*
+//*
 
-#text-separator-testimonials h3 span{
-    padding:25px 50px;
-    border: solid 10px white;
-    font-size:24px;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    color:white;
+//colors
+$white:  white;
+$color_pumice_approx: #c8c8c8;
+$color_monsoon_approx: #898989;
+
+.review {
+    text-align: center;
+    padding: 40px;
+    h4 {
+        color: $color_monsoon_approx;
+        letter-spacing: 0;
+        margin-bottom: 0;
+    }
+    p.titulation {
+        color: $color_pumice_approx;
+        font-style: italic;
+        font-size: 10px;
+    }
 }
-#text-separator-testimonials h3{
-    padding-top:100px;
+#text-separator-testimonials h3 {
+    padding-top: 100px;
+    span {
+        padding: 25px 50px;
+        border: solid 10px $white;
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        color: $white;
+    }
 }
-
-
-.review{
-    text-align:center;
-    padding:40px;
-}
-
-
-.review p.titulation{
-    color:#c8c8c8;
-    font-style:italic;
-    font-size:10px;
-}
-.review h4{
-    color:#898989;
-    letter-spacing:0;
-    margin-bottom:0px;
-}
-
-.text-separator-title h2{
-    padding-top:100px;
+.text-separator-title h2 {
+    padding-top: 100px;
 }

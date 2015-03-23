@@ -1,78 +1,76 @@
-/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
-/*<!--Team -->*/
-/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+//*
+//*
+//*
+//*
+//* Team-Section Styles
+//*
+//*
+//*
 
+//colors
+$white: white;
+$black:  black;
+
+//fonts
+$font_0: Montserrat;
+$font_1: sans-serif;
 
 #team {
-    background:white;
+    background: $white;
+    .container {
+        padding-bottom: 0;
+    }
+    .owl-buttons {
+        div {
+            padding: 5px 9px;
+            position: absolute;
+            top: 50%;
+            //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: translateY(-50%);
+        }
+        i {
+            margin-top: 2px;
+        }
+        .owl-prev {
+            left: 10px;
+        }
+        .owl-next {
+            right: 10px;
+        }
+    }
 }
-
-#team .container{
-    padding-bottom:0;
+#owl-team {
+    position: relative;
 }
-
-#team .owl-buttons div {
-    padding: 5px 9px;
+.memberParagraph {
+    padding-right: 40px;
 }
-
-#team .owl-buttons i{
-    margin-top: 2px;
+.memberDescription {
+    h2 {
+        letter-spacing: 0;
+    }
+    .position {
+        margin-top: 10px;
+        margin-bottom: 40px;
+        span {
+            font-family: $font_0, $font_1;
+            font-weight: 400;
+            font-size: 10px;
+            letter-spacing: 3px;
+            line-height: 20px;
+            text-transform: uppercase;
+            border: solid 1px $black;
+            padding: 6px;
+        }
+    }
 }
-
-#team .owl-buttons div {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-#team .owl-buttons .owl-prev{
-    left: 10px;
-
-}
-
-#team .owl-buttons .owl-next{
-    right: 10px;
-}
-
-#owl-team{
-    position:relative;
-}
-
-.memberParagraph{
-    padding-right:40px;
-}
-
-.memberDescription h2{
-    letter-spacing:0;
-}
-
-.memberDescription .position{
-    margin-top:10px;
-    margin-bottom:40px;
-}
-
-.memberDescription .position span {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 10px;
-    letter-spacing: 3px;
-    line-height: 20px;
-    text-transform: uppercase;
-    border: solid 1px black;
-    padding: 6px;
-}
-
-.teamSocial{
-    margin-top:20px;
-}
-
-.teamSocial a{
-    padding:7px;
-    font-size:18px;
-}
-
-.teamSocial a:first-child{
-    padding-left:0px;
+.teamSocial {
+    margin-top: 20px;
+    a {
+        padding: 7px;
+        font-size: 18px;
+        &:first-child {
+            padding-left: 0;
+        }
+    }
 }
