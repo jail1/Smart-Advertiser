@@ -32,7 +32,7 @@ html {
 }
 body {
     @extend %extend_1;
-    font-family: $$font_montserrat, $font_sans_serif;
+    font-family: $font_montserrat, $font_sans_serif;
     font-weight: 300;
 }
 a {

@@ -8,148 +8,132 @@
 //*
 
 .navbar-default {
-    padding: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
+  padding: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-transition: all .5s ease .25s;
+  transition: all .5s ease .25s;
+  .navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+  }
+  .navbar-nav > .active > a {
+    color: $white;
     background-color: transparent;
-    border-color: transparent;
-    //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-    transition: all .5s ease .25s;
-    .navbar-brand {
-        font-family: $font_montserrat, $font_sans_serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: $white;
+    &:hover, &:focus {
+      color: $white;
+      background-color: transparent;
     }
-    .navbar-nav> {
-        &.active>a {
-            color: $white;
-            background-color: transparent;
-            &:hover {
-                color: $white;
-                background-color: transparent;
-            }
-            &:focus {
-                color: $white;
-                background-color: transparent;
-            }
-        }
-        &.open>a {
-            color: $white;
-            background-color: transparent;
-            &:hover {
-                color: $white;
-                background-color: transparent;
-            }
-            &:focus {
-                color: $white;
-                background-color: transparent;
-            }
-        }
-    }
-    .navbar-toggle {
-        border-color: transparent;
-        .icon-bar {
-            background-color: $white;
-        }
-        &:hover {
-            background-color: transparent;
-        }
-        &:focus {
-            background-color: transparent;
-        }
-    }
-    .navbar-nav>li>a {
-        &:hover {
-            color: $color_quill_gray_approx;
-        }
-        &:focus {
-            color: $color_quill_gray_approx;
-        }
-    }
+  }
 }
+
 .affix {
-    background-color: $color_shark_approx;
+  background-color: $color_shark_approx;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-default {
+  .navbar-toggle {
+    .icon-bar {
+      background-color: $white;
+    }
+    border-color: transparent;
+    &:hover, &:focus {
+      background-color: transparent;
+    }
+  }
+  .navbar-nav > .open > a {
+    color: $white;
+    background-color: transparent;
+    &:hover, &:focus {
+      color: white;
+      background-color: transparent;
+    }
+  }
+}
+
+.navbar-nav > li > a {
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: $color_quill_gray_approx;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+.dropdown-menu {
+  > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    line-height: 1.42857143;
+    color: $white;
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 3px 0 0;
+  font-size: 10px;
+  text-align: left;
+  list-style: none;
+  background-color: $mine_shaft;
+  background-clip: padding-box;
+  border: 0;
+  box-shadow: none;
 }
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 3px 0 0;
-    font-size: 10px;
-    text-align: left;
-    list-style: none;
-    background-color: $mine_shaft;
-    //Instead of the line below you could use @includebackground-clip($clip)
-    background-clip: padding-box;
-    border: 0;
-    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-    box-shadow: none;
-    > li > a {
-        display: block;
-        padding: 3px 20px;
-        clear: both;
-        line-height: 1.42857143;
-        color: $white;
-        white-space: nowrap;
-        font-family: $font_montserrat, $font_sans_serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 10px;
-        letter-spacing: 1px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+
+.navbar-default .navbar-nav > li > a {
+  &:hover, &:focus {
+    color: #d5d5d5;
+  }
 }
+
+.dropdown-menu > .active > a {
+  color: #282828;
+  background-color: #d5d5d5;
+  &:hover, &:focus {
+    color: #282828;
+    background-color: #d5d5d5;
+  }
+}
+
 .dropdown-submenu {
-    position: relative;
-    &.pull-left {
-        float: none;
-    }
-    &:hover>.dropdown-menu {
-        display: block;
-    }
-}
-@media(max-width: 768px) {
-    .dropdown-submenu li a {
-        text-align: center;
-    }
-}
-.navbar-nav > li > a {
-    font-size: 10px;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: $color_quill_gray_approx;
-    letter-spacing: 3px;
-    position: relative;
-}
-.dropdown-menu>.active>a {
-    color: $color_shark_approx;
-    background-color: $color_quill_gray_approx;
-    &:hover {
-        color: $color_shark_approx;
-        background-color: $color_quill_gray_approx;
-    }
-    &:focus {
-        color: $color_shark_approx;
-        background-color: $color_quill_gray_approx;
-    }
-}
-.dropdown-submenu>.dropdown-menu {
+  position: relative;
+  > .dropdown-menu {
     top: 0;
     left: 100%;
     margin-top: -6px;
     margin-left: -1px;
-    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px 6px;
     border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu>a:after {
+  }
+  &:hover {
+    > .dropdown-menu {
+      display: block;
+    }
+    > a:after {
+      border-left-color: $white;
+    }
+  }
+  > a:after {
     display: block;
     content: " ";
     float: right;
@@ -158,16 +142,25 @@
     border-color: transparent;
     border-style: solid;
     border-width: 5px 0 5px 5px;
-    border-left-color: $color_celeste_approx;
+    border-left-color: #cccccc;
     margin-top: 5px;
     margin-right: -10px;
+  }
+  &.pull-left {
+    float: none;
+    > .dropdown-menu {
+      left: -100%;
+      margin-left: 10px;
+      -webkit-border-radius: 6px 0 6px 6px;
+      -moz-border-radius: 6px 0 6px 6px;
+      border-radius: 6px 0 6px 6px;
+    }
+  }
 }
-.dropdown-submenu:hover>a:after {
-    border-left-color: $white;
+
+@media (max-width: 768px) {
+  .dropdown-submenu li a {
+    text-align: center;
+  }
 }
-.dropdown-submenu.pull-left>.dropdown-menu {
-    left: -100%;
-    margin-left: 10px;
-    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
-    border-radius: 6px 0 6px 6px;
-}
+

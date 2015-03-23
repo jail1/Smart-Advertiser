@@ -1,6 +1,6 @@
 // ##################################################################################################################################
 /* Author: Iacob Silviu - Iulian @BlissTerra
-/* Project: Smart-Advertiser
+/* Project: Smart-Advertiser (~ http://smart-advertiser.com ~)
 /* Date: 3 / 22 / 2015
 // ################################################################################################################################*/
 // Nodejs Requires 
@@ -8,7 +8,6 @@
 
 var gulp 			= require('gulp'),                  //* 
 	gutil 			= require('gulp-util'),             //******** Utilities  
-	browserify		= require('gulp-browserify'),       //*
 	gulpif 			= require('gulp-if'),               //*
 	concat			= require('gulp-concat'),           //*    
 	connect			= require('gulp-connect'),          //*     
@@ -44,6 +43,7 @@ if(env === 'development') {
 // ##################################################################################################################################
 
     jsSources	  = [ // Bootstrap JavaScript components.
+    				 'components/scripts/jquery.js',
 					 'components/scripts/affix.js', 
 					 'components/scripts/alert.js',
 				 	 'components/scripts/button.js',
@@ -62,7 +62,7 @@ if(env === 'development') {
 			 	 	 'components/scripts/external/jquery.backstretch.js',
 			 	 	 'components/scripts/external/imagesloaded.pkgd.js',
 			 	 	 'components/scripts/external/classie.js',
-			 	 	 'components/scritps/external/owl.carousel.js'
+			 	 	 'components/scritps/external/owl.carousel.js',
 
 		 	 	 	 // Project JavaScript components.
  				 	 'components/scripts/overlay.js',
@@ -70,7 +70,7 @@ if(env === 'development') {
 				 	 'components/scripts/googleMapInit.js',
 				 	 'components/scripts/custom.js'],
 
- 	sassSources	  = ['components/sass/**/**/**/*.scss'],
+ 	sassSources	  = ['components/sass/**/**/**/*.scss', 'components/sass/*.scss'],
  	staticSources = [outputDir + '*.html', outputDir + 'pages/*.html'];
 
 // ##################################################################################################################################
@@ -79,8 +79,7 @@ if(env === 'development') {
 
 gulp.task('js', function() {
 	gulp.src(jsSources)
-		.pipe(concat('script.js'))
-		.pipe(browserify())
+		.pipe(concat('scripts.js'))
 		.pipe(gulpif(prod, guglify()))
 		.pipe(gulp.dest(outputDir + 'js'))
 		.pipe(notify({ message: 'JS Processed!' }))
