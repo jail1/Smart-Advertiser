@@ -1,126 +1,145 @@
-//*
-//*
-//*
-//*
-//* Shortcodes Styles
-//*
-//*
-//*
-
-//@extend-elements
-//original selectors
-//.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus
-%extend_1 {
-    border: 3px solid $black;
-    border-bottom-color: transparent;
-    margin-bottom: -2px;
-}
-
+// #
+// # Author: Iacob Silviu Iulian
+// #
+// # Variables.
+// #
+// #
+// #
+// #
 
 .nav-tabs {
-    border-bottom: 3px solid $black;
+    border-bottom: 3px solid black;
 }
+
 .nav-tabs>li>a {
-    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
     border-radius: 0;
     border-bottom-color: transparent;
 }
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    border: 3px solid black;
+    border-bottom-color: transparent;
+    margin-bottom:-2px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #fff;
+    background-color: #282828;
+}
+
 .nav-pills>li>a {
-    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
-    border-radius: 0;
-    font-family: $font_montserrat, $font_sans_serif;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 900;
+    border-radius: 0px;
+    font-family:'Montserrat', sans-serif;
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:900;
 }
-.tab-content {
-    padding: 10px;
+
+.tab-content{
+
+    padding:10px;
 }
+
 .panel-heading {
     padding: 18px;
 }
+
+.panel-group .panel {
+    border-radius: 0;
+}
+
 .panel {
     border: 2px solid transparent;
-    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
-    border-radius: 0;
+    border-radius: 0px;
 }
-.panel-title {
+.panel-title{
     font-size: 12px;
 }
+
+
 .panel-default {
-    border-color: $black;
+    border-color: black;
 }
-.buttons {
-    padding: 30px;
-    button {
-        margin: 30px;
-    }
+
+.buttons{
+    padding:30px;
 }
-.btn-primary {
-    color: $color_steel_blue_approx;
-    &:after {
-        background: $color_steel_blue_approx;
-    }
-    &:before {
-        background: $color_steel_blue_approx;
-    }
+
+
+.buttons button{
+    margin:30px;
 }
-.btn-success {
-    color: $color_apple_approx;
-    &:after {
-        background: $color_apple_approx;
-    }
-    &:before {
-        background: $color_apple_approx;
-    }
+
+.btn-primary{
+    color:#357ebd;
 }
-.btn-info {
-    color: $color_picton_blue_approx;
-    &:after {
-        background: $color_picton_blue_approx;
-    }
-    &:before {
-        background: $color_picton_blue_approx;
-    }
+
+.btn-primary:after, .btn-primary:before {
+    background: #357ebd;
 }
-.btn-warning {
-    color: $color_fuel_yellow_approx;
-    &:after {
-        background: $color_fuel_yellow_approx;
-    }
-    &:before {
-        background: $color_fuel_yellow_approx;
-    }
+
+.btn-success{
+    color:#4cae4c;
 }
-.btn-danger {
-    color: $color_valencia_approx;
-    &:after {
-        background: $color_valencia_approx;
-    }
-    &:before {
-        background: $color_valencia_approx;
-    }
+
+.btn-success:after, .btn-success:before {
+    background: #4cae4c;
 }
+
+.btn-info{
+    color:#46b8da;
+}
+
+.btn-info:after, .btn-info:before {
+    background: #46b8da;
+}
+.btn-warning{
+    color:#eea236
+}
+
+.btn-warning:after, .btn-warning:before {
+    background: #eea236;
+}
+
+
+.btn-danger{
+    color:#d43f3a;
+}
+
+.btn-danger:after, .btn-danger:before {
+    background: #d43f3a;
+}
+
 .alert {
-    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
-    border-radius: 0;
+    border-radius: 0px;
 }
-#callToAction {
-    background: $color_shark_approx;
-    .container {
-        padding-top: 75px;
-        padding-bottom: 75px;
-    }
-    h4 {
-        color: $white;
-        letter-spacing: 2px;
-    }
-    p {
-        color: $color_quill_gray_approx;
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
+
+#callToAction{
+    background:#282828;
 }
+
+#callToAction .container{
+    padding-top:75px;
+    padding-bottom:75px;
+}
+
+#callToAction h4{
+    color:white;
+    letter-spacing:2px;
+}
+
+#callToAction p{
+    color: #d5d5d5;
+    padding-top:15px;
+    padding-bottom:15px;
+
+}
+
+#callToAction h4{
+    color:white;
+    letter-spacing:2px;
+}
+
 .dropcap {
     float: left;
     color: inherit;
@@ -129,31 +148,6 @@
     padding-top: 4px;
     padding-right: 8px;
     padding-left: 3px;
-    font-family: $font_montserrat, $font_sans_serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-}
-.nav-tabs>li.active>a {
-    @extend %extend_1;
-    &:hover {
-        @extend %extend_1;
-    }
-    &:focus {
-        @extend %extend_1;
-    }
-}
-.nav-pills>li.active>a {
-    color: $white;
-    background-color: $color_shark_approx;
-    &:hover {
-        color: $white;
-        background-color: $color_shark_approx;
-    }
-    &:focus {
-        color: $white;
-        background-color: $color_shark_approx;
-    }
-}
-.panel-group .panel {
-    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
-    border-radius: 0;
 }

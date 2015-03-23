@@ -1,29 +1,34 @@
-//*
-//*
-//*
-//*
-//* Parallax-Letters Styles
-//*
-//*
-//*
+// #
+// # 
+// #
+// # Parallax - Letters.
+// #
+// #
+// #
+// #
 
-.parallaxLetter {
-    position: absolute;
-    font-size: 300px;
-    color: $color_alabaster_approx;
-    z-index: 1;
-    width: 200px;
-    height: 300px;
+.parallaxLetter{
+    position:absolute;
+    font-size:$parallax_letters_fsize;
+    color: $parallax_letters_color;
+    z-index:1;
+    width: $parallax_letters_width;
+    height: $parallax_letters_height;
 }
-.letter1 {
-    right: 20%;
+
+
+.letter1{
+    right: $parallax_letters_letter1_pos_right;
 }
-.letter2 {
-    left: 20%;
+
+.letter2{
+    left: $parallax_letters_letter2_pos_left;
 }
-.letter3 {
-    right: 15%;
+
+.letter3{
+    right: $parallax_letters_letter3_pos_right;
 }
-.letter4 {
-    left: 10%;
+
+.letter4{
+    left: $parallax_letters_letter4_pos_left;
 }

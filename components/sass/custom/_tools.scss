@@ -1,29 +1,31 @@
-//*
-//*
-//*
-//*
-//* Tools Styles
-//*
-//*
-//*
+// #
+// #
+// #
+// # Tools.
+// #
+// #
+// #
+// #
 
-.separator {
-    width: 170px;
-    max-width: 170px;
-    margin-top: 120px;
-    margin-bottom: 100px;
+.separator{
+    width:170px;
+    max-width:170px;
+    margin-top:120px;
+    margin-bottom:100px;
 }
-.lineSeparator {
-    width: 60px;
-    max-width: 60px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+
+.lineSeparator{
+    width:60px;
+    max-width:60px;
+    margin-top:30px;
+    margin-bottom:30px;
 }
-.preloaderLogo {
-    min-width: 200px;
-    max-width: 300px;
-    width: 15%;
+.preloaderLogo{
+    min-width: $preloader_logo_min_width;
+    max-width: $preloader_logo_max_height;
+    width: $preloader_logo_width;
 }
+
 .black-overlay {
     position: absolute;
     left: 0;
@@ -31,22 +33,30 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0,$black_80 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 );
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%); 
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.8))); 
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); 
+    background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); 
+    background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); 
+
 }
-.sectionIntro {
-    p {
-        margin-top: 100px;
-    }
-    h2 span {
-        padding: 25px 50px;
-        border: solid 10px $color_shark_approx;
-    }
+
+.sectionIntro h2 span{
+    padding:25px 50px;
+    border: $sectionIntro_border;
 }
-.noscroll {
-    overflow: hidden;
+
+.sectionIntro p{
+    margin-top:100px;
 }
-.container {
-    z-index: 2;
-    overflow: hidden;
+
+.noscroll{
+    overflow:hidden;
+}
+
+.container{
+    z-index:2;
+    overflow:hidden;
 }

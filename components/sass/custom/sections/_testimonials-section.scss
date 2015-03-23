@@ -1,37 +1,43 @@
-//*
-//*
-//*
-//*
-//* Testimonials-Section Styles
-//*
-//*
-//*
+// #
+// # 
+// #
+// # Testimonials Section.
+// #
+// #
+// #
+// #
 
-.review {
-    text-align: center;
+
+#text-separator-testimonials h3 span{
+    padding: 25px 50px;
+    border: $text_separator_testimonials_h3_span_border;
+    font-size: $text_separator_testimonials_h3_span_font_size;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: $text_separator_testimonials_h3_span_color;
+}
+
+#text-separator-testimonials h3{
+    padding-top:100px;
+}
+
+.review{
+    text-align: $testimonials_review_align;
     padding: 40px;
-    h4 {
-        color: $color_monsoon_approx;
-        letter-spacing: 0;
-        margin-bottom: 0;
-    }
-    p.titulation {
-        color: $color_pumice_approx;
-        font-style: italic;
-        font-size: 10px;
-    }
 }
-#text-separator-testimonials h3 {
-    padding-top: 100px;
-    span {
-        padding: 25px 50px;
-        border: solid 10px $white;
-        font-size: 24px;
-        text-transform: uppercase;
-        letter-spacing: 6px;
-        color: $white;
-    }
+
+.review p.titulation{
+    color: $testimonials_review_tit_color;
+    font-style: $testimonials_review_tit_color_style
+    font-size: $testimonials_review_tit_font_size;
 }
-.text-separator-title h2 {
-    padding-top: 100px;
+
+.review h4{
+    color: $testimonials_review_h4_color;
+    letter-spacing: $testimonials_review_h4_letter_spacing;
+    margin-bottom: 0px;
+}
+
+.text-separator-title h2{
+    padding-top:100px;
 }

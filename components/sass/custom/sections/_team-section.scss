@@ -1,68 +1,82 @@
-//*
-//*
-//*
-//*
-//* Team-Section Styles
-//*
-//*
-//*
+// #
+// # 
+// #
+// # Team-Section.
+// #
+// #
+// #
+// #
 
 #team {
     background: $white;
-    .container {
-        padding-bottom: 0;
-    }
-    .owl-buttons {
-        div {
-            padding: 5px 9px;
-            position: absolute;
-            top: 50%;
-            //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-            transform: translateY(-50%);
-        }
-        i {
-            margin-top: 2px;
-        }
-        .owl-prev {
-            left: 10px;
-        }
-        .owl-next {
-            right: 10px;
-        }
-    }
 }
-#owl-team {
-    position: relative;
+
+#team .container{
+    padding-bottom:0;
 }
-.memberParagraph {
-    padding-right: 40px;
+
+#team .owl-buttons div {
+    padding: 5px 9px;
 }
-.memberDescription {
-    h2 {
-        letter-spacing: 0;
-    }
-    .position {
-        margin-top: 10px;
-        margin-bottom: 40px;
-        span {
-            font-family: $font_montserrat, $font_sans_serif;
-            font-weight: 400;
-            font-size: 10px;
-            letter-spacing: 3px;
-            line-height: 20px;
-            text-transform: uppercase;
-            border: solid 1px $black;
-            padding: 6px;
-        }
-    }
+
+#team .owl-buttons i{
+    margin-top: 2px;
 }
-.teamSocial {
+
+#team .owl-buttons div {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#team .owl-buttons .owl-prev{
+    left: 10px;
+
+}
+
+#team .owl-buttons .owl-next{
+    right: 10px;
+}
+
+#owl-team{
+    position:relative;
+}
+
+.memberParagraph{
+    padding-right:40px;
+}
+
+.memberDescription h2{
+    letter-spacing:0;
+}
+
+.memberDescription .position{
+    margin-top:10px;
+    margin-bottom:40px;
+}
+
+.memberDescription .position span {
+    font-family: $font_montserrat, $body_font_sansserif
+    font-weight: 400;
+    font-size: $member_description_font_size;
+    letter-spacing: 3px;
+    line-height: 20px;
+    text-transform: $member_description_text_transform;
+    border: $member_description_border;
+    padding: 6px;
+}
+
+.teamSocial{
     margin-top: 20px;
-    a {
-        padding: 7px;
-        font-size: 18px;
-        &:first-child {
-            padding-left: 0;
-        }
-    }
+}
+
+.teamSocial a{
+    padding:7px;
+    font-size: $team_social_font_size;
+}
+
+.teamSocial a:first-child{
+    padding-left:0px;
 }

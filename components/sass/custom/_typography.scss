@@ -1,61 +1,62 @@
-//*
-//*
-//*
-//*
-//* Typography Styles
-//*
-//*
-//*
+// #
+// #
+// #
+// # Typography.
+// #
+// #
+// #
+// #
 
-h1 {
-    font-family: $font_montserrat, $font_sans_serif;
-    font-weight: 700;
-    font-size: 50px;
-    text-transform: uppercase;
-    letter-spacing: 20px;
+h1, h2, h3, h4, h5, h6{
+    font-family: $font_montserrat, $body_font_sansserif;
+    font-weight: $headers_font_weight;
 }
-h2 {
-    font-family: $font_montserrat, $font_sans_serif;
-    font-weight: 700;
-    font-size: 30px;
-    text-transform: uppercase;
-    letter-spacing: 15px;
+
+h1{
+    font-size: $h1_size;
+    text-transform: $h1_ttransform;
+    letter-spacing: $h1_letter_spacing;
 }
-h3 {
-    font-family: $font_montserrat, $font_sans_serif;
-    font-weight: 700;
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 10px;
+
+h2{
+    font-size: $h2_size;
+    text-transform: $h2_ttransform;
+    letter-spacing: $h2_letter_spacing;
 }
-h4 {
-    font-family: $font_montserrat, $font_sans_serif;
-    font-weight: 700;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 8px;
+
+h3{
+
+    font-size: $h3_size;
+    text-transform:  $h3_ttransform;
+    letter-spacing: $h3_letter_spacing;
 }
-h5 {
-    font-family: $font_montserrat, $font_sans_serif;
-    font-weight: 700;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+
+h4{
+    font-size: $h4_size;
+    text-transform: $h4_ttransform;
+    letter-spacing: $h4_letter_spacing;
 }
-h6 {
-    font-family: $font_montserrat, $font_sans_serif;
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0;
+
+h5{
+    font-size: $h5_size;
+    text-transform: $h5_ttransform;
+    letter-spacing: $h5_letter_spacing;
 }
+
+h6{
+    font-size: $h6_size;
+    text-transform: $h6_ttransform;
+    letter-spacing: $h6_letter_spacing;
+}
+
 p {
-    font-family: $font_open_sans, $font_sans_serif;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 24px;
-    color: $paragraphs;
-    &.bold {
-        font-weight: 700;
-    }
+    font-family: $body_font_opensans, $body_font_sansserif;
+    font-weight: $p_weight;
+    font-size: $p_size;
+    line-height: $p_line_height;
+    color: $p_color;
+}
+
+p.bold{
+    font-weight: $p_weight;
 }

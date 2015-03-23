@@ -1,86 +1,56 @@
-//*
-//*
-//*
-//*
-//* Text-Separator Styles
-//*
-//*
-//*
+// #
+// # 
+// #
+// # Text-Separator.
+// #
+// #
+// #
+// #
 
-//@extend-elements
-//original selectors
-//#text-separator, #text-separator-clients, #text-separator-testimonials, #text-separator-timers
-%extend_1 {
-    background-color: $color_rangoon_green_approx;
+#text-separator .container-fluid .col-md-6{
+    padding-left:50px;
+}
+
+#text-separator, #text-separator-clients, #text-separator-testimonials, #text-separator-timers{
+    background-color: $text-separator-background;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 15px;
     overflow: hidden;
+
 }
 
-//original selectors
-//#text-separator h2, #text-separator-clients h2, #text-separator-testimonials h2
-%extend_2 {
+#text-separator h2,
+#text-separator-clients h2,
+#text-separator-testimonials h2{
     color: $white;
     z-index: 100;
     position: relative;
 }
 
-//original selectors
-//#text-separator p, #text-separator-clients p, #text-separator-testimonials p
-%extend_3 {
-    color: $color_mercury_approx;
+#text-separator p,
+#text-separator-clients p,
+#text-separator-testimonials p{
+    color: $text-separator-color;
     z-index: 100;
     position: relative;
 }
 
-
-#text-separator {
-    @extend %extend_1;
-    h2 {
-        @extend %extend_2;
-    }
-    p {
-        @extend %extend_3;
-    }
-    .container-fluid .col-md-6 {
-        padding-left: 50px;
-    }
-}
-#text-separator-clients {
-    @extend %extend_1;
-    h2 {
-        @extend %extend_2;
-    }
-    p {
-        @extend %extend_3;
-    }
-}
-#text-separator-testimonials {
-    @extend %extend_1;
-    h2 {
-        @extend %extend_2;
-    }
-    p {
-        @extend %extend_3;
-    }
-}
-#text-separator-timers {
-    @extend %extend_1;
-}
-.textSepLogo {
-    position: absolute;
-    right: 0;
-    top: 0;
+.textSepLogo{
+    position:absolute;
+    right: 0; top:0;
     z-index: 1;
 }
-.timerWrapper {
+
+.timerWrapper{
     color: $white;
-    padding: 20px;
-    h1 {
-        letter-spacing: 0;
-    }
-    p {
-        color: $color_quill_gray_approx;
-    }
+    padding:20px;
+}
+
+.timerWrapper h1{
+    letter-spacing:0;
+}
+
+.timerWrapper p{
+    color: $time-wrapper-color;
 }

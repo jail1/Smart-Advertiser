@@ -1,25 +1,27 @@
-//*
-//*
-//*
-//*
-//* Clients-logo Styles
-//*
-//*
-//*
+// #
+// # 
+// #
+// # Clients - Logo.
+// #
+// #
+// #
+// #
 
-#text-separator-clients {
-    padding-top: 110px;
-    padding-bottom: 110px;
-    h3 span {
-        padding: 25px 50px;
-        border: solid 10px $white;
-        font-size: 24px;
-        text-transform: uppercase;
-        letter-spacing: 10px;
-        color: $white;
-    }
+#text-separator-clients{
+    padding-top:110px;
+    padding-bottom:110px;
 }
-.clientLogo img {
-    width: 180px;
+
+#text-separator-clients h3 span{
+    padding:25px 50px;
+    border: $clients_h3_border;
+    font-size: $clients_h3_font_size;
+    text-transform: uppercase;
+    letter-spacing: $clients_h3_letter_spacing;
+    color: $clients_h3_color;
+}
+
+.clientLogo img{
+    width:180px;
     margin-top: 15px;
 }

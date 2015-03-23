@@ -7,8 +7,8 @@
 //*
 //*
 
-// Font-awesome
-@import 'font-awesome';
+// Font-Awesome
+@import "font-awesome";
 
 // Core variables and mixins
 @import "bootstrap/variables";
@@ -61,37 +61,35 @@
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
 
+// Owl-Carousel
+@import "owl-carousel";
 
-
-
-//Importing variables
+// Import Custom Variables
 @import "variables";
 
-
-// Owl Carousel
-@import 'owl.carousel';
-
 // Preloader
-@import 'custom/preloader';
+@import "custom/preloader";
 
-// Custom Classes
-@import 'custom/general';
-@import 'custom/tools';
-@import 'custom/parallax-letters';
-@import 'custom/buttons';
-@import 'custom/navbar';
-@import 'custom/typography';
-@import 'custom/sections/intro-section';
-@import 'custom/text-separator';
-@import 'custom/welcome-separator';
-@import 'custom/sections/about-section';
-@import 'custom/sections/portfolio-section';
-@import 'custom/clients-logo';
-@import 'custom/sections/services-section';
-@import 'custom/sections/testimonials-section';
-@import 'custom/pricing-tables';
-@import 'custom/sections/contact-section';
-@import 'custom/sections/blog-section';
-@import 'custom/shortcodes';
+// Custom Styles
+@import "custom/general";
+@import "custom/tools";
+@import "custom/parallax-letters";
+@import "custom/buttons";
+@import "custom/navbar";
+@import "custom/typography";
+@import "custom/sections/intro-section";
+@import "custom/text-separator";
+@import "custom/welcome-separator";
+@import "custom/sections/about-section";
+@import "custom/sections/portfolio-section";
+@import "custom/sections/team-section";
+@import "custom/clients-logo";
+@import "custom/sections/services-section";
+@import "custom/sections/testimonials-section";
+@import "custom/pricing-tables";
+@import "custom/sections/contact-section";
+@import "custom/sections/blog-section";
+@import "custom/shortcodes";
 
-@import 'responsive';
+// Custom Media Queries
+@import "custom/responsive";

@@ -1,29 +1,28 @@
-//*
-//*
-//*
-//*
-//* Intr-Section Styles
-//*
-//*
-//*
+// #
+// # 
+// #
+// # Intro - Section.
+// #
+// #
+// #
+// #
 
-#intro {
-	h1 {
-		color: $white;
-	}
-	p {
-		color: $white;
-	}
-	.separator {
-		margin-top: 30px;
-		margin-bottom: 30px;
-	}
-	a {
-		margin-top: 20px;
-	}
+#intro h1, #intro p{
+    color: $white;
+
 }
-.introLogo {
-	position: relative;
-	width: 160px;
-	margin-bottom: 20px;
+
+.introLogo{
+    position: relative;
+    width:160px;
+    margin-bottom:20px;
+}
+
+#intro .separator{
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+#intro a {
+    margin-top:20px;
 }

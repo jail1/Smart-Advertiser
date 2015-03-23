@@ -1,106 +1,193 @@
-//*
-//*
-//* Author: Iacob Silviu - Iulian
-//*
-//* Fonts Stored is sasy vars.
-//*
+// #
+// # Author: Iacob Silviu Iulian
+// #
+// # Variables.
+// #
+// #
+// #
+// #
+
+	//General
+
+$body_font_opensans: 'Open Sans';
+$body_font_sansserif: sans-serif;
+$font_montserrat: 'Montserrat';
+
+$general_transition: all .5s ease .25s;
+
+$white: #ffffff;
+
+$links_color: #252525;
+$links_hover_color: #626262;
+$links_text_decoration: none;
 
 
-// When I say colors under..I mean unique colors anf fonts. Some of the colros and fonts are shared. (most of them actually.)
-// Didn't bother too much, sorry!
+	//Tools
 
-//fonts under Blog Section
-$font_montserrat: Montserrat;
-$font_sans_serif: sans-serif;
+$sectionIntro_border: solid 10px #282828;
+$preloader_logo_min_width: 200px;
+$preloader_logo_max_height: 300px;
+$preloader_logo_width: 15%;
 
-//fonts under Contact Section
-$font_open_sans: Open Sans;
+	//Parallax-Letters
 
-//*
-//* Colors stored in sassy vars.
-//*
+$parallax_letters_color: #F9F9F9;
+$parallax_letters_width: 200px;
+$parallax_letters_height: 300px;
+$parallax_letters_fsize: 300px;
 
-//colors under Blog Section
-$color_shark_approx: #282828;
-$color_tuatara_approx: #353535;
-$white: white;
+$parallax_letters_letter1_pos_right: 20%;
+$parallax_letters_letter2_pos_left: 20%;
+$parallax_letters_letter3_pos_right: 15%;
+$parallax_letters_letter4_pos_left: 10%;
 
-//colors under Contact Section
-$white_40: rgba(255,255,255,0.4);
-$color_tuatara_approx: #393939;
-$mine_shaft: #323232;
-$color_shady_lady_approx: #a5a5a5; //This is great!
+	//Buttons
 
-//colors under Portfolio Section
-$color_gravel_approx: #4c4c4c;
+$general_btn_background: transparent;
+$general_btn_ttransform: uppercase;
+$general_btn_border_top: 2px solid transparent;
+$general_btn_border_bottom: 2px solid transparent;
 
-//colors under About Section
-$color_wild_sand_approx: #f5f5f5;
-$black: black;
+$btn_default_background: #e6e6e6;
+$btn_default_color: #333;
 
-//colors under Contact Section
-$color_log_cabin_approx: #222222;
+$btn_black_background: #e6e6e6;
+$btn_black_color: #282828;
 
-//colors under Portfolio Section
-$color_rangoon_green_approx: #1d1d1d;
-$color_desert_storm_approx: #f8f8f8;
-$black_100: rgba(0,0,0,1);
-$color_shark_70_approx: rgba(40, 40, 40, 0.70);
+$btn_transition_afterandbefore: all .2s ease 0s;
 
-//colors under Testimonials Section
-$color_pumice_approx: #c8c8c8;
-$color_monsoon_approx: #898989;
+	//Navbar
 
-//colors under Buttons Appendix
-$color_mine_shaft_approx: #333;
-$color_mercury_approx: #e6e6e6;
+$navbar_background: transparent;
+$navbar_border: transparent;
+$navbar_padding: 30px;
+$navbar_padding_left: 50px;
+$navbar_padding_right: 50px;
 
-//colors under General Section
-$color_storm_dust_approx: #626262;
+$navbar_ttransform: uppercase;
+$navbar_color: $white;
+$navbar_links: #d5d5d5;
 
-//colors under Navbar Appendix
-$color_celeste_approx: #cccccc;
+$navbar_event_background: transparent;
+$navbar_event_color: #d5d5d5;
 
-//colors under Parallax Letters Appendix
-$color_alabaster_approx: #f9f9f9;
+$affix_background: #282828;
 
-//colors under Pricing Tables Appendix
-$wild_sand: #f4f4f4;
+$dropdown_background: #323232;
+$dropdown_align: left;
 
-//colors under Shortcodes Appendix
-$color_steel_blue_approx: #357ebd;
-$color_apple_approx: #4cae4c;
-$color_picton_blue_approx: #46b8da;
-$color_fuel_yellow_approx: #eea236;
-$color_valencia_approx: #d43f3a;
-$color_quill_gray_approx: #d5d5d5;
+	//Typography
 
-//colors under Tools Appendix
-$black_80: rgba(0,0,0,0.8);
+$headers_font_weight: 700;
 
-//colros under Typography Appendix
-$paragraphs: #4c4c4c;
+$h1_size: 50px;
+$h1_ttransform: uppercase;
+$h1_letter_spacing: 20px;
 
-//colors under Preloader Appendix
-$color_mosque_approx: #046674;
-$color_alto_approx: #ddd;
+$h2_size: 30px;
+$h2_ttransform: uppercase;
+$h2_letter_spacing: 15px;
 
-//colors Responsive
-$color_mercury_approx: #e7e7e7;
-$black_90: rgba(0, 0, 0, 0.9);
+$h3_size: 24px;
+$h3_ttransform: uppercase;
+$h3_letter_spacing: 10px;
 
-//*
-//* Links (mostly, if not all are image paths! XD)
-//*
+$h4_size: 20px;
+$h4_ttransform: uppercase;
+$h4_letter_spacing: 8px;
 
-//links under Portfolio Section
-$portfolio_intro: url(img/portfolioIntro.jpg);
+$h5_size: 14px;
+$h5_ttransform: uppercase;
+$h5_letter_spacing: 3px;
 
-//links under Services Section
-$background_service: url(img/backgroundService.jpg);
+$h6_size: 12px;
+$h6_ttransform: uppercase;
+$h6_letter_spacing: 0px;
 
-//links under Welcome Separator Section
-$gradient: url(img/gradient.png);
+$p_size: 14px;
+$p_weight: 24px;
+$p_color: $4c4c4c;
+$p_line_height: 24px;
+$p_weight: 700;
 
-//links under Owl-Carousel Styles
-$grabbing_png: url(img/grabbing.png);
+	//Text Separator
+
+$text-separator-background: #1d1d1d;
+$text-separator-color: #e7e7e7;
+$time-wrapper-color: #d5d5d5;
+
+	//Welcome Separator
+
+$white-overlay-imgurl: "../img/gradient.png";
+
+	//About Section
+
+$progress-bar-transition: width .6s ease;
+$progress-bar-color: #ffffff;
+
+	//Portfolio Section
+
+$portfolio-intro-url: 'img/portfolioIntro.jpg';
+$gallery-background: #4c4c4c;
+
+	//Team Section
+
+$member_description_font_size: 10px; 
+$member_description_text_transform: uppercase;
+$member_description_border: solid 1px black;
+$team_social_font_size: 18px;
+
+	//Clients Logo
+
+$clients_h3_font_size: 24px;
+$clients_h3_border: solid 10px white;
+$clients_h3_ttransform: uppercase;
+$clients_h3_color: $white;
+$clients_h3_letter_spacing: 10px;
+
+	//Services Section
+
+$service_box_separator_width: 100px;
+$service_box_separator_max_width: 100px;
+
+$services_h2_span_border: solid 10px #282828;
+$service_box_i_font_size: 9em;
+$intro_service_box_background_url: 'img/backgroundService.jpg';
+$white_box_background: $white;
+$black_box_background: #282828;
+$black_box_i_color: $white;
+$services_simple_background: $white;
+
+$services_icon_width: 40px;
+$services_icon_height: 40px;
+$services_icon_align: center;
+$services_icon_font_size: 40px;
+$services_icon_line_height: 40px;
+$services_icon_transition: all .3s ease-in-out;
+
+$simple_service_content_h4_letter_spacing: 5px;
+$service_icon_2_font_size: 40px;
+$service_icon_2_line_height: 40px;
+$service_icon_2_transition: all .3s ease-in-out;
+
+	//Testimonials Section
+
+$text_separator_testimonials_h3_span_color: $white;
+$text_separator_testimonials_h3_span_font_size: 24px;
+$text_separator_testimonials_h3_span_border: solid 10px $white;
+
+$testimonials_review_tit_color: #c8c8c8
+$testimonials_review_tit_font_size: 10px;
+$testimonials_review_tit_color_style: italic;
+
+$testimonials_review_align: center;
+$testimonials_review_h4_color: #898989;
+$testimonials_review_h4_letter_spacing: 0;
+
+	//Pricing Tables
+
+$pricing_background: #f4f4f4;
+$pricing_table_wrapper_border: solid 10px black;
+
+	//Contact Section
+
