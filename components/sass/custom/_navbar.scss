@@ -7,17 +7,6 @@
 //*
 //*
 
-//colors
-$white: white;
-$color_shark_approx: #282828;
-$color_quill_gray_approx: #d5d5d5;
-$mine_shaft: #323232;
-$color_celeste_approx: #cccccc;
-
-//fonts
-$font_0: Montserrat;
-$font_1: sans-serif;
-
 .navbar-default {
     padding: 30px;
     padding-left: 50px;
@@ -27,7 +16,7 @@ $font_1: sans-serif;
     //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all .5s ease .25s;
     .navbar-brand {
-        font-family: $font_0, $font_1;
+        font-family: $font_montserrat, $font_sans_serif;
         font-weight: 700;
         text-transform: uppercase;
         color: $white;
@@ -109,7 +98,7 @@ $font_1: sans-serif;
         line-height: 1.42857143;
         color: $white;
         white-space: nowrap;
-        font-family: $font_0, $font_1;
+        font-family: $font_montserrat, $font_sans_serif;
         font-weight: 700;
         text-transform: uppercase;
         font-size: 10px;

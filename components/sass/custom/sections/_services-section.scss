@@ -7,13 +7,6 @@
 //*
 //*
 
-//colors
-$color_shark_approx: #282828;
-$white: white;
-
-//urls
-$url_0: url(img/backgroundService.jpg);
-
 .serviceBox {
     width: 50%;
     height: 400px;
@@ -42,7 +35,7 @@ $url_0: url(img/backgroundService.jpg);
 .introServiceBox {
     position: relative;
     z-index: 2;
-    background: $url_0 no-repeat center center;
+    background: $background_service no-repeat center center;
     background-size: cover;
     background-position: 50% 0, 50% 0, 50% 0, 50% 0;
     background-repeat: repeat, repeat, repeat ,no-repeat;

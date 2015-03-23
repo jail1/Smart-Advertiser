@@ -7,24 +7,11 @@
 //*
 //*
 
-
-//colors
-$color_shark_approx: #282828;
-$color_rangoon_green_approx: #1d1d1d;
-$color_desert_storm_approx: #f8f8f8;
-$white: white;
-$black_100: rgba(0,0,0,1);
-$color_shark_70_approx: rgba(40, 40, 40, 0.70);
-$color_gravel_approx: #4c4c4c;
-
-//urls
-$url_0: url(img/portfolioIntro.jpg);
-
 .portfolioIntro {
     height: 300px;
     position: relative;
     z-index: 2;
-    background: $url_0 no-repeat center center;
+    background: $portfolio_intro no-repeat center center;
     background-size: cover;
     background-position: 50% 0, 50% 0, 50% 0, 50% 0;
     background-repeat: repeat, repeat, repeat ,no-repeat;

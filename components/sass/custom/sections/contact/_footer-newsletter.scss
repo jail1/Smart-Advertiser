@@ -7,16 +7,6 @@
 //*
 //*
 
-//colors
-$color_tuatara_approx: #393939;
-$white: white;
-$mine_shaft: #323232;
-$color_shady_lady_approx: #a5a5a5;
-
-//fonts
-$font_0: Montserrat;
-$font_1: sans-serif;
-
 .input-group-addon {
     height: 54px;
     //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
@@ -63,7 +53,7 @@ $font_1: sans-serif;
     line-height: 54px;
     font-size: 10px;
     text-transform: uppercase;
-    font-family: $font_0, $font_1;
+    font-family: $font_montserrat, $font_sans_serif;
     color: $white;
     letter-spacing: 1px;
 }

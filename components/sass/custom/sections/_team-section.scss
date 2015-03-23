@@ -7,14 +7,6 @@
 //*
 //*
 
-//colors
-$white: white;
-$black:  black;
-
-//fonts
-$font_0: Montserrat;
-$font_1: sans-serif;
-
 #team {
     background: $white;
     .container {
@@ -53,7 +45,7 @@ $font_1: sans-serif;
         margin-top: 10px;
         margin-bottom: 40px;
         span {
-            font-family: $font_0, $font_1;
+            font-family: $font_montserrat, $font_sans_serif;
             font-weight: 400;
             font-size: 10px;
             letter-spacing: 3px;

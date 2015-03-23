@@ -7,16 +7,6 @@
 //*
 //*
 
-//colors
-$white: white;
-$color_mine_shaft_approx: #333;
-$color_mercury_approx: #e6e6e6;
-$color_shark_approx: #282828;
-
-//fonts
-$font_0: Montserrat;
-$font_1: sans-serif;
-
 //@extend-elements
 //original selectors
 //.btn:after, .btn:before
@@ -54,7 +44,7 @@ $font_1: sans-serif;
     //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
     border-radius: 0;
     border: 0;
-    font-family: $font_0, $font_1;
+    font-family: $font_montserrat, $font_sans_serif;
     font-weight: 700;
     text-transform: uppercase;
     position: relative;

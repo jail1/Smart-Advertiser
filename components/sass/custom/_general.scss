@@ -7,14 +7,6 @@
 //*
 //*
 
-//colors
-$color_shark_approx: #252525;
-$color_storm_dust_approx: #626262;
-
-//fonts
-$font_0: Open Sans;
-$font_1: sans-serif;
-
 //@extend-elements
 //original selectors
 //html, body
@@ -40,7 +32,7 @@ html {
 }
 body {
     @extend %extend_1;
-    font-family: $font_0, $font_1;
+    font-family: $$font_montserrat, $font_sans_serif;
     font-weight: 300;
 }
 a {

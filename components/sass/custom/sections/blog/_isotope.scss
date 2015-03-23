@@ -7,16 +7,6 @@
 //*
 //*
 
-//colors
-$color_shark_approx: #282828;
-$color_tuatara_approx: #353535;
-$white: white;
-
-//fonts
-$font_0: Montserrat;
-$font_1: sans-serif;
-
-
 //*
 //* Clearfix Hack
 //*
@@ -91,7 +81,7 @@ $font_1: sans-serif;
     font-size: 12px;
     //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
     border-radius: 0;
-    font-family: $font_0, $font_1;
+    font-family: $font_montserrat, $font_sans_serif;
     text-transform: uppercase;
     letter-spacing: 1px;
     &:focus {

@@ -7,14 +7,6 @@
 //*
 //*
 
-//colors
-$white_40: rgba(255,255,255,0.4);
-$white: white;
-
-//fonts
-$font_0: Open Sans;
-$font_1: sans-serif;
-
 #countdown {
     width: 100%;
     position: relative;
@@ -47,7 +39,7 @@ $font_1: sans-serif;
     .countdown-period {
         font-size: 14px;
         color: $white;
-        font-family: $font_0, $font_1;
+        font-family: $font_open_sans, $font_sans_serif;
         font-weight: 300;
     }
 }

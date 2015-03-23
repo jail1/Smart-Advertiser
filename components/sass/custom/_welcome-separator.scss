@@ -7,12 +7,6 @@
 //*
 //*
 
-//colors
-$white: white;
-
-//urls
-$url_0: url(img/gradient.png);
-
 #welcome-separator {
     background-color: $white;
     .col-md-7 {
@@ -36,7 +30,7 @@ $url_0: url(img/gradient.png);
     }
 }
 .whiteOverlay {
-    background: transparent $url_0 bottom right repeat-y;
+    background: transparent $gradient bottom right repeat-y;
     bottom: 0;
     height: 500px;
     right: 0;
