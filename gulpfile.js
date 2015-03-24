@@ -78,7 +78,7 @@ if(env === 'development') {
 
 		 	 	 	 // Project JavaScript components.
 				 	 'components/scripts/preloader.js'],
-	jsSources2 	  = ['components/scripts/custom.js', 'components/scripts/mapsinit.js'],
+	jsSources2 	  = ['components/scripts/custom.js', 'components/scripts/mapsinit.js', 'components/scripts/external/overlay.js'],
 
  	sassSources	  = ['components/sass/**/**/**/*.scss', 'components/sass/*.scss', 'components/sass/**/*.scss', 'components/sass/**/**/*.scss'],
  	staticSources = [outputDir + '*.html', outputDir + 'pages/*.html'];
@@ -148,9 +148,16 @@ gulp.task('compass', function() {
 // ##################################################################################################################################
 
 gulp.task('static', function() {
-	gulp.src('builds/development/*.html')
+	gulp.src(['builds/development/*.html'])
 		.pipe(gulpif(prod, minifyhtml()))
 		.pipe(gulpif(prod, gulp.dest(outputDir)))
+		.pipe(connect.reload());
+});
+
+gulp.task('static2', function() {
+	gulp.src(['builds/development/pages/*.html'])
+		.pipe(gulpif(prod, minifyhtml()))
+		.pipe(gulpif(prod, gulp.dest(outputDir + 'pages')))
 		.pipe(connect.reload());
 });
 
@@ -169,7 +176,7 @@ gulp.task('images', function() {
 // ##################################################################################################################################
 
 gulp.task('fonts', function() {
-	gulp.src('builds/development/fonts/*.*')
+	gulp.src('builds/development/fonts/**/*.*')
 		.pipe(gulpif(prod, gulp.dest('builds/production/fonts/')))
 		.pipe(connect.reload());
 });
@@ -183,6 +190,7 @@ gulp.task('watch', function() {
 	gulp.watch(jsSources, ['js2', 'js-lint']);
 	gulp.watch('components/sass/*.scss', ['compass']);
 	gulp.watch('builds/development/*.html', ['static']);
+	gulp.watch('builds/development/pages/*.html', ['static2']);
 	gulp.watch('builds/development/img/**/*.*', ['images']);
 	gulp.watch('builds/development/fonts/*.*', ['fonts']);
 });
@@ -202,7 +210,7 @@ gulp.task('connect', function() {
 // Default Task
 // ##################################################################################################################################
 
-gulp.task('default', ['static', 'js-lint', 'js','js2', 'compass', 'images', 'fonts', 'connect', 'watch']); 
+gulp.task('default', ['static', 'static2', 'js-lint', 'js','js2', 'compass', 'images', 'fonts', 'connect', 'watch']); 
 // Process all of this. Yell 'gulp' in console.
 
 // ##################################################################################################################################

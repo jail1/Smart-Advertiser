@@ -166,10 +166,10 @@ $clients_h3_letter_spacing: 10px;
 $service_box_separator_width: 100px;
 $service_box_separator_max_width: 100px;
 
-$services_h2_span_border: solid 10px #282828;
+$services_h2_span_border: solid 6px rgba(89, 2, 2, .8);
 $service_box_i_font_size: 9em;
-$intro_service_box_background_url: 'img/backgroundService.jpg';
-$white_box_background: $white;
+$intro_service_box_background_url: '../img/backgroundService.jpg';
+$white_box_background: #dac6c6;
 $black_box_background: #282828;
 $black_box_i_color: $white;
 $services_simple_background: $white;

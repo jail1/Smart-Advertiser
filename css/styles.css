@@ -10789,7 +10789,7 @@ p.bold {
 
 .serviceBox h2 span {
   padding: 25px 50px;
-  border: solid 10px #282828;
+  border: solid 6px rgba(89, 2, 2, 0.8);
 }
 
 .serviceBox i {
@@ -10799,7 +10799,7 @@ p.bold {
 .introServiceBox {
   position: relative;
   z-index: 2;
-  background: url("img/backgroundService.jpg") no-repeat center center;
+  background: url("../img/backgroundService.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -10809,7 +10809,7 @@ p.bold {
 }
 
 .whiteBox {
-  background: #ffffff;
+  background: #dac6c6;
 }
 
 .blackBox {
