@@ -10098,12 +10098,12 @@ section .container {
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #d5d5d5;
+  color: #590202;
 }
 
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
   color: #282828;
-  background-color: #d5d5d5;
+  background-color: #590202;
 }
 
 .dropdown-submenu {
@@ -10976,12 +10976,14 @@ label input, textarea {
   padding-bottom: 0px;
   border: 0;
   background: transparent;
-  border-bottom: 5px solid #282828;
-  border-left: 5px solid #282828;
+  border-bottom: 3px solid #590202;
+  border-left: 3px solid #590202;
+  border-top: 3px solid #590202;
+  border-right: 3px solid #590202;
   font-size: 10px;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
-  color: #282828;
+  color: #590202;
   letter-spacing: 1px;
 }
 
@@ -10992,10 +10994,12 @@ label input, textarea {
   padding-bottom: 0;
   border: 0;
   background: transparent;
-  border-bottom: 5px solid #282828;
-  border-left: 5px solid #282828;
+  border-bottom: 3px solid #590202;
+  border-left: 3px solid #590202;
+  border-top: 3px solid #590202;
+  border-right: 3px solid #590202;
   font-family: 'Montserrat', sans-serif;
-  color: #282828;
+  color: #590202;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -11894,6 +11898,11 @@ div.jqi .jqisubstate .jqibuttons button {
 
   .navbar-nav > li > .dropdown-menu {
     text-align: center;
+  }
+
+  .navbar-toggle {
+    color: #590202;
+    border-color: #590202;
   }
 
   .portfolioFilters {
