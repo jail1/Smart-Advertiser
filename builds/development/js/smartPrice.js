@@ -43,15 +43,14 @@ angular.module('smartPrice', ['ngAnimate'])
 		content 	: [
 			"Expect ~60 premium designs",
 			"Exceptional designers",
-			"Dedicated account manager",
-			"All designers handpicked by 99designs"
+			"Dedicated account manager"
 		]
 
 	}];
 	
 	$scope.product    = undefined;
 	$scope.totalPrice = 0;
-	$scope.productName = "Select an item";
+	$scope.productName = "Selectează produse! ";
 
 	$scope.getProduct = function(key){
 		$scope.productName = key;
@@ -59,6 +58,10 @@ angular.module('smartPrice', ['ngAnimate'])
 	}
 
 	$scope.processProduct = function(key){
+
+		if($scope.productName === "Selectează produse! ") {
+			$.prompt("Nu ați ales o gamă de produse! ");
+		}
 
 		price    = parseFloat($scope.product[key].replace(/^\D+/g,''));
 		
@@ -78,5 +81,6 @@ angular.module('smartPrice', ['ngAnimate'])
 		}
 
 	}
+
 }]);
 

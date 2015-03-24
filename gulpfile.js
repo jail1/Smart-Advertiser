@@ -83,7 +83,8 @@ if(env === 'development') {
 					 'components/scripts/external/overlay.js',
 					 'components/scripts/angular.js',
 					 'components/scripts/angular.animate.js',
-					 'components/scripts/smartPrice.js'],
+					 'components/scripts/smartPrice.js',
+					 'components/scripts/external/impromptu.js'],
 
  	sassSources	  = ['components/sass/**/**/**/*.scss', 'components/sass/*.scss', 'components/sass/**/*.scss', 'components/sass/**/**/*.scss'],
  	staticSources = [outputDir + '*.html', outputDir + 'pages/*.html'];

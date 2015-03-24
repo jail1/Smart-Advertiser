@@ -124,6 +124,7 @@
                 <h1 class="parallaxLetter letter1" data-stellar-ratio="1.2" data-stellar-vertical-offset="-200">P</h1>
                 <h1 class="parallaxLetter letter2" data-stellar-ratio="0.8">H</h1>
 
+                <img class="img-responsive center-block introLogo" src="../img/logoWhite.png" alt="">
 
                 <!--header-->
                 <div class="row sectionIntro">
@@ -147,17 +148,45 @@
 
                 <!--content-->
 
-                <h1 class="productTitle">{{ productName }}</h1>
+                <h1 class="productTitle text-center">{{ productName }}</h1>
 
-                <div class="btn-group" role="group" aria-label="">
+                <nav class="navbar navbar-default">
 
-                 <button ng-repeat="(key ,val) in products" ng-mouseover="getProduct(key)">{{ key }}</button>
+                  <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header navbar-center">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand text-center" href="#">Be smart</a>
+                    </div>
 
-                </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                <div class="row" ng-show="product != undefined">
- 
+                      <ul class="nav navbar-nav">
+                        <li class="btn btn-default btn-black" ng-repeat="(key ,val) in products" ng-click="getProduct(key)"><a>{{ key }}</a></li>
+                      </ul>
+
+                      <ul class="nav navbar-nav navbar-right">
+                        <li class="btn btn-default btn-success" ng-show="totalPrice > 0"><a>Total: € {{ totalPrice }}</a></li>
+                        <li class="btn btn-default btn-success" ng-show="totalPrice == 0"><a>Nu ati selectat nimic!</a></li>
+                      </ul>
+
+                    </div><!-- /.navbar-collapse -->
+
+                  </div>
+                  <!-- /.container-fluid -->
+
+                </nav>
+
+                <div class="row">
+
                     <div class="col-md-6 col-sm-12 col-xs-12 text-center" ng-repeat="(key,box) in boxes">
+
                         <div class="tableWrapper" data-scroll-reveal="enter left move 10px over 1s after 0.2s">
 
                             <div class="subscriptionName">
@@ -188,11 +217,12 @@
                                 </ul>
                             </div>
 
-                            <a class="btn btn-default btn-black" href="#" ng-click="processProduct(key)" ng-show="!taken[productName][key]">Scoate din cos</a>                       
+                            <a class="btn btn-default btn-success" ng-click="processProduct(key)" ng-show="!taken[productName][key]">Adaugă în coș</a>                       
 
-                            <a class="btn btn-default btn-black" href="#" ng-click="processProduct(key)" ng-show="taken[productName][key]">Scoate din cos</a>
+                            <a class="btn btn-default btn-success" ng-click="processProduct(key)" ng-show="taken[productName][key]">Scoate din coș</a>
 
                         </div>
+
                     </div>
 
                 </div>
@@ -203,27 +233,34 @@
         <!--/* END pricing SECTION */-->
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-
         <section id="footer" class="dark">
             <div class="topLine">
                 <div class="container">
 
                     <div class="row">
                         <div class="col-md-4 footerText">
-                            <h4 data-scroll-reveal="enter left move 10px over 1s after 0.2s"> About Phoenix</h4>
+                            <h4 data-scroll-reveal="enter left move 10px over 1s after 0.2s"> Despre Smart - Advertiser</h4>
                             <img src="../img/lineSeparatorWhite.png" class="img-responsive lineSeparator" data-scroll-reveal="enter left move 10px over 1s after 0.3s" alt="separator">
                             <p data-scroll-reveal="enter left move 10px over 1s after 0.3s">
-                                Moments its musical age explain. But extremity sex now education concluded earnestly her continual. Oh furniture acuteness suspected continual ye something frankness. Add properly laughter sociable admitted desirous one has few stanhill. Opinion regular in perhaps another enjoyed no engaged he at.
+                                <ul>
+                                    <li>Punem pe primul loc interesul clientului;</li>
+                                    <li>Iubim succesul</li>
+                                    <li>Ne place ceea ce facem;</li>
+                                    <li>Avem experiență</li>
+                                    <li>Lucrăm în echipă;</li>
+                                    <li>Oferim prioritate funcționalității și design-ului</li>
+                                    <li>Suntem în pas cu noile tehnologii</li>
+                                </ul>
                             </p>
                         </div>
 
                         <div class="col-md-4 footerText">
-                            <h4 data-scroll-reveal="enter left move 10px over 1s after 0.2s">Newsletter</h4>
+                            <h4 data-scroll-reveal="enter left move 10px over 1s after 0.2s">Fii la Curent !</h4>
                             <img src="../img/lineSeparatorWhite.png" class="img-responsive lineSeparator" data-scroll-reveal="enter left move 10px over 1s after 0.3s" alt="separator">
                             <div class="form-group" data-scroll-reveal="enter left move 10px over 1s after 0.3s">
                                 <div class="input-group">
                                     <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
-                                    <input class="form-control" type="email" placeholder="Enter email">
+                                    <input class="form-control" type="email" placeholder="Introdu E-mail">
                                 </div>
                             </div>
                         </div>
@@ -236,21 +273,21 @@
 
                                 <div class="col-md-6">
                                     <ul class="infoContact">
-                                        <li><i class="fa fa-location-arrow"></i> 4435 Berkshire Circle</li>
-                                        <li>Knoxville</li>
-                                        <li>TN 27912</li>
+                                        <li><i class="fa fa-location-arrow"></i> Str. Garii, 63-65, Galati</li>
+                                        <li>Galati</li>
+                                        <li>CP 800 003</li>
                                     </ul>
 
                                     <ul class="infoContact">
-                                        <li><i class="fa fa-phone"></i> 879-890-9767</li>
-                                        <li>234-890-1213</li>
+                                        <li><i class="fa fa-phone"></i>075-187-5714</li>
+                                        <li>074-742-3149</li>
                                     </ul>
                                 </div>
 
                                 <div class="col-md-6">
                                     <ul class="infoContact">
-                                        <li><i class="fa fa-envelope-o"></i> mail@mail.com</li>
-                                        <li>support@mail.com</li>
+                                        <li><i class="fa fa-envelope-o"></i>support@smart-advertiser.com</li>
+                                        <li>suport</li>
                                     </ul>
 
                                     <ul class="infoContact">
@@ -271,19 +308,17 @@
             <div class="bottomLine text-center">
 
                 <div class="backToTop">
-                    <a data-scroll href="">
+                    <a data-scroll href="#pricing">
                         <i class="fa fa-angle-double-up"></i><br>
-                        <h5>Back to top</h5>
+                        <h5>Inapoi sus</h5>
                     </a>
                 </div>
 
                 <ul class="footerSocialIcons">
-                    <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
+                    <li><a href="https://www.facebook.com/pages/Smart-Advertising/932583760125404"><i class="fa fa-facebook fa-2x"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram fa-2x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance fa-2x"></i></a></li>
                 </ul>
-                <p class="bold">All Rights Reserved. </p> <p>Premium Template by artBreeze Studios.</p>
+                <p class="bold">Toate drepturile rezervate @ </p> <p>Smart - Advertiser</p>
             </div>
         </section>
 
@@ -292,6 +327,7 @@
         <script type="text/javascript" src = "../js/smartPrice.js"></script>
         <script type="text/javascript" src= "../js/scripts.js"></script>
         <script type="text/javascript" src= "../js/custom.js"></script>
+        <script type="text/javascript" src= "../js/impromptu.js"></script>
 
     </body>
 </html>

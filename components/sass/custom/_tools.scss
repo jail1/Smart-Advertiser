@@ -60,3 +60,17 @@
     z-index:2;
     overflow:hidden;
 }
+
+.productTitle {
+    padding-bottom: 30px;
+}
+#total {
+    width: 100%;
+}
+
+.total > span {
+    text-align: center;
+    font-family: $body_font_opensans;
+    font-size: 20px;
+    color: red;
+}
