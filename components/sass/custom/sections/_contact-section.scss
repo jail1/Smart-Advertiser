@@ -118,15 +118,14 @@ label input, textarea{
 
 
 .topLine{
-    background:#282828;
-    padding:50px;
+    background: $footer_topLine_background;
+    padding: 50px;
 }
-
 
 #footer .bottomLine {
     padding: 50px;
     margin: 0 auto;
-    background-color: #222222;
+    background-color: $footer_bottomLine_background
 }
 
 #footer .bottomLine p{
@@ -300,11 +299,6 @@ iframe{border:0;}
 // #
 // #
 
-
-$contact_featured_works_background: $white;
-$contact_featured_works_nav_background: #282828;
-$contact_featured_works_nav_color: $white;
-
 #featured-works{
     background: $contact_featured_works_background;
 }
@@ -319,9 +313,11 @@ $contact_featured_works_nav_color: $white;
 
 #owl-featured .owl-buttons{
     display:inline-block;
+
 }
 #owl-featured .owl-prev, .owl-next{
-    display:inline-block;}
+    display:inline-block;
+}
 
 .featuredNav{
     margin:10px;
@@ -329,8 +325,6 @@ $contact_featured_works_nav_color: $white;
     background: $contact_featured_works_nav_background;
     color: $contact_featured_works_nav_color;
 }
-
-
 
 ul, ol {
     line-height: 24px;

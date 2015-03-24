@@ -9884,8 +9884,8 @@ section .container {
 
 .parallaxLetter {
   position: absolute;
-  font-size: 300px;
-  color: #F9F9F9;
+  font-size: 150px;
+  color: rgba(255, 255, 255, 0);
   z-index: 1;
   width: 200px;
   height: 300px;
@@ -10221,7 +10221,7 @@ p.bold {
 }
 
 #text-separator, #text-separator-clients, #text-separator-testimonials, #text-separator-timers {
-  background-color: #1d1d1d;
+  background-color: rgba(89, 2, 2, 0.8);
   padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 15px;
@@ -10315,7 +10315,7 @@ p.bold {
 }
 
 #about {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 #about .container {
@@ -11040,14 +11040,14 @@ label input, textarea {
 }
 
 .topLine {
-  background: #282828;
+  background: rgba(89, 2, 2, 0.7);
   padding: 50px;
 }
 
 #footer .bottomLine {
   padding: 50px;
   margin: 0 auto;
-  background-color: #222222;
+  background-color: rgba(89, 2, 2, 0.95);
 }
 
 #footer .bottomLine p {
@@ -11207,9 +11207,8 @@ iframe {
   border: 0;
 }
 
-/*/featured works*/
 #featured-works {
-  background: white;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .featureWrapper {
@@ -11232,10 +11231,9 @@ iframe {
   margin: 10px;
   padding: 5px 10px;
   background: #282828;
-  color: white;
+  color: #ffffff;
 }
 
-/*pages*/
 ul, ol {
   line-height: 24px;
 }

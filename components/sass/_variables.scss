@@ -21,6 +21,9 @@ $links_color: #252525;
 $links_hover_color: #626262;
 $links_text_decoration: none;
 
+$footer_bottomLine_background: rgba(89, 2, 2, 0.95);
+$footer_topLine_background: rgba(89, 2, 2, 0.7);
+
 
 	//Tools
 
@@ -32,10 +35,10 @@ $preloader_logo_width: 15%;
 
 	//Parallax-Letters
 
-$parallax_letters_color: #F9F9F9;
+$parallax_letters_color: rgba(255, 255, 255, 0);
 $parallax_letters_width: 200px;
 $parallax_letters_height: 300px;
-$parallax_letters_fsize: 300px;
+$parallax_letters_fsize: 150px;
 
 $parallax_letters_letter1_pos_right: 20%;
 $parallax_letters_letter2_pos_left: 20%;
@@ -113,7 +116,7 @@ $p_weight: 700;
 
 	//Text Separator
 
-$text-separator-background: #1d1d1d;
+$text-separator-background: rgba(89, 2, 2, 0.8);
 $text-separator-color: #e7e7e7;
 $time-wrapper-color: #d5d5d5;
 
@@ -128,7 +131,7 @@ $about_progress_border: 3px solid #590202;
 $about_progress_border_rad: 1px;
 $progress_bar_background: #f24405;
 
-$about_background: rgba(255, 255, 255, 0.7);
+$about_background: rgba(255, 255, 255, 0.80);
 $about_icon-color: #f5f5f5;
 
 $progress_bar_transition: width .6s ease;
@@ -203,3 +206,6 @@ $pricing_table_wrapper_border: solid 10px black;
 
 	//Contact Section
 
+$contact_featured_works_background: rgba(255, 255, 255, 0.8); //Make it a white with an alpha opacity of .8 to see the smart-adv background XD
+$contact_featured_works_nav_background: #282828;
+$contact_featured_works_nav_color: $white;
