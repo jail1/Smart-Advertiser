@@ -44,17 +44,17 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">PHOENIX</a>
+                        <a class="navbar-brand" href="#">Smart - advertiser</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-right" id="navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li><a data-scroll href="../index.html">Home</a></li>
-                            <li><a data-scroll href="#">About</a></li>
-                            <li><a data-scroll href="../pages/portfolio.html">Portfolio</a></li>
-                            <li><a data-scroll href="../pages/team.html">Team</a></li>
-                            <li><a data-scroll href="../pages/services.html">Services</a></li>
+                            <li><a data-scroll href="../index.html">Acasa</a></li>
+                            <li><a data-scroll href="#">Despre</a></li>
+                            <li><a data-scroll href="../pages/portfolio.html">Produse</a></li>
+                            <li><a data-scroll href="../pages/team.html">Echipa</a></li>
+                            <li><a data-scroll href="../pages/services.html">Servicii</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
@@ -81,7 +81,7 @@
             </nav>
         </header>
 
-        <!--preloader-->
+<!--         preloader
         <div class="ip-header">
             <div class="ip-logo">
                 <img class="img-responsive preloaderLogo center-block" src="../img/logoWhite.png" alt="preloader">
@@ -94,7 +94,7 @@
                 </svg>
             </div>
         </div>
-        <!--end preloader-->
+        end preloader -->
 
 
         <!--OVERLAY FOR THE PORTFOLIO MENU // DONT' DELETE IF YOU PLAN TO USE THIS OPTION-->
@@ -118,7 +118,7 @@
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <!--/* pricing SECTION */-->
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <section id="pricing">
+        <section id="pricing" data-ng-app="smartPrice" data-ng-controller="smartPriceController">
             <div class="container">
 
                 <h1 class="parallaxLetter letter1" data-stellar-ratio="1.2" data-stellar-vertical-offset="-200">P</h1>
@@ -129,10 +129,10 @@
                 <div class="row sectionIntro">
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <h2 data-scroll-reveal="enter top move 10px over 1s after 0.2s">
-                            <span>Our Plans</span>
+                            <span>Fă-ți un preț </span>
                         </h2>
                         <p data-scroll-reveal="enter bottom move 10px over 1s after 0.2s">
-                            Marianne or husbands if at stronger ye. Considered is as middletons uncommonly. Promotion perfectly ye consisted so. His chatty dining for effect ladies active. Equally journey wishing not several behaved chapter she two sir.
+                          Fiecare proiect al nostru este caracterizat de unicitate. Pe fiecare îl abordăm în mod diferit. Scopul nostru este obținerea succesului cu fiecare în parte, doza de creativitate atinge, de fiecare dată, cote maxime.
                         </p>
 
                         <img src="../img/separatorBlack.png" class="img-responsive center-block separator" alt="separator">
@@ -146,17 +146,28 @@
                 <h1 class="parallaxLetter letter4" data-stellar-ratio="0.3">X</h1>
 
                 <!--content-->
-                <div class="row">
-                    <div class="col-md-4 col-sm-12 col-xs-12 text-center">
+
+                <h1 class="productTitle">{{ productName }}</h1>
+
+                <div class="btn-group" role="group" aria-label="">
+
+                 <button ng-repeat="(key ,val) in products" ng-mouseover="getProduct(key)">{{ key }}</button>
+
+                </div>
+
+                <div class="row" ng-show="product != undefined">
+ 
+                    <div class="col-md-6 col-sm-12 col-xs-12 text-center" ng-repeat="(key,box) in boxes">
                         <div class="tableWrapper" data-scroll-reveal="enter left move 10px over 1s after 0.2s">
+
                             <div class="subscriptionName">
-                                <h2>Standard</h2>
+                                <h2>{{ box.name }}</h2>
                             </div>
 
                             <img class="separator center-block img-responsive" src="../img/separatorBlack.png" alt="Dotted Separator">
 
                             <div class="subscriptionPrice">
-                                <h2>40$</h2><p> /month</p>
+                                <h2>{{ product[key] }}</h2><p> /month</p>
                             </div>
 
                             <div class="rating">
@@ -172,88 +183,18 @@
 
                             <div class="subscriptionList">
                                 <ul>
-                                    <li>Customer Support 24/7</li>
-                                    <li>Lifetime Updates</li>
-                                    <li>10GB Cloud Storage</li>
-                                    <li>10 E-mail boxes</li>
+                                    <li ng-repeat="c in box.content">{{c}}</li>
                                     <li>-</li>
                                 </ul>
                             </div>
-                            <a class="btn btn-default btn-black" href="#">Subscribe!</a>
+
+                            <a class="btn btn-default btn-black" href="#" ng-click="processProduct(key)" ng-show="!taken[productName][key]">Scoate din cos</a>                       
+
+                            <a class="btn btn-default btn-black" href="#" ng-click="processProduct(key)" ng-show="taken[productName][key]">Scoate din cos</a>
+
                         </div>
                     </div>
 
-                    <div class="col-md-4 col-sm-12 col-xs-12 text-center">
-                        <div class="tableWrapper" data-scroll-reveal="enter bottom move 10px over 1s after 0.2s">
-                            <div class="subscriptionName">
-                                <h2>Basic</h2>
-                            </div>
-
-                            <img class="separator center-block img-responsive" src="../img/separatorBlack.png" alt="Dotted Separator">
-
-                            <div class="subscriptionPrice">
-                                <h2>60$</h2><p> /month</p>
-                            </div>
-
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-
-
-                            <img class=" separator center-block img-responsive" src="../img/separatorBlack.png" alt="Dotted Separator">
-
-                            <div class="subscriptionList">
-                                <ul>
-                                    <li>Customer Support 24/7</li>
-                                    <li>Lifetime Updates</li>
-                                    <li>10GB Cloud Storage</li>
-                                    <li>10 E-mail boxes</li>
-                                    <li>-</li>
-                                </ul>
-                            </div>
-                            <a class="btn btn-default btn-black" href="#">Subscribe!</a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-12 col-xs-12 text-center">
-                        <div class="tableWrapper" data-scroll-reveal="enter right move 10px over 1s after 0.2s">
-                            <div class="subscriptionName">
-                                <h2>Full</h2>
-                            </div>
-
-                            <img class="separator center-block img-responsive" src="../img/separatorBlack.png" alt="Dotted Separator">
-
-                            <div class="subscriptionPrice">
-                                <h2>80$</h2><p> /month</p>
-                            </div>
-
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-
-
-                            <img class=" separator center-block img-responsive" src="../img/separatorBlack.png" alt="Dotted Separator">
-
-                            <div class="subscriptionList">
-                                <ul>
-                                    <li>Customer Support 24/7</li>
-                                    <li>Lifetime Updates</li>
-                                    <li>10GB Cloud Storage</li>
-                                    <li>10 E-mail boxes</li>
-                                    <li>-</li>
-                                </ul>
-                            </div>
-                            <a class="btn btn-default btn-black" href="#">Subscribe!</a>
-                        </div>
-                    </div>
                 </div>
                 <!--end content-->
             </div>
@@ -346,8 +287,11 @@
             </div>
         </section>
 
-        <script type="text/javascript" src="../js/scripts.js"></script>
-        <script src="../js/custom.js"></script>
+        <script type="text/javascript" src = "../js/angular.js"></script>
+        <script type="text/javascript" src = "../js/angular.animate.js"></script>
+        <script type="text/javascript" src = "../js/smartPrice.js"></script>
+        <script type="text/javascript" src= "../js/scripts.js"></script>
+        <script type="text/javascript" src= "../js/custom.js"></script>
 
     </body>
 </html>

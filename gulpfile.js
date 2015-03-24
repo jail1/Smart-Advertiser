@@ -78,7 +78,12 @@ if(env === 'development') {
 
 		 	 	 	 // Project JavaScript components.
 				 	 'components/scripts/preloader.js'],
-	jsSources2 	  = ['components/scripts/custom.js', 'components/scripts/mapsinit.js', 'components/scripts/external/overlay.js'],
+	jsSources2 	  = ['components/scripts/custom.js', 
+					 'components/scripts/mapsinit.js', 
+					 'components/scripts/external/overlay.js',
+					 'components/scripts/angular.js',
+					 'components/scripts/angular.animate.js',
+					 'components/scripts/smartPrice.js'],
 
  	sassSources	  = ['components/sass/**/**/**/*.scss', 'components/sass/*.scss', 'components/sass/**/*.scss', 'components/sass/**/**/*.scss'],
  	staticSources = [outputDir + '*.html', outputDir + 'pages/*.html'];
