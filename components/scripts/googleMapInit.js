@@ -7,7 +7,7 @@ function initialize() {
     var map_canvas = document.getElementById('googleMap');
 
     var map_options = {
-        center: new google.maps.LatLng(44.434596, 26.080533),
+        center: new google.maps.LatLng(45.4434746, 28.0516104),
         zoom: 16,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         scrollwheel: false
@@ -15,7 +15,7 @@ function initialize() {
 
     var map = new google.maps.Map(map_canvas, map_options);
     var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(44.434596, 26.080533),
+        position: new google.maps.LatLng(45.4434746, 28.0516104),
         map: map,
         title: 'Hello World!'
     });
@@ -34,7 +34,7 @@ function initialize() {
         },{
             "featureType": "road",
             "stylers": [
-                { "color": "#383838" }
+                { "color": "#590202" }
             ]
         },{
             "elementType": "geometry.stroke",
