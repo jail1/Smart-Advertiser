@@ -6,6 +6,23 @@
 // #
 // #
 // #
+/* make keyframes that tell the start state and the end state of our object */
+$loadingAnimationDuration: 1s ;
+$loadingAnimationDealy:    0.7s ;
+$loaderOpactiy:            0.7 ;
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+@-webkit-keyframes fadeOut { from { opacity:1; } to { opacity:$loaderOpactiy; } }
+@-moz-keyframes fadeOut { from { opacity:1; } to { opacity:$loaderOpactiy; } }
+@keyframes fadeOut { from { opacity:1; } to { opacity:$loaderOpactiy; } }
+
+@keyframes waitandhide {
+  from { opacity:0.5; }
+  to { opacity:0.5; }
+}
 
 .ip-header {
     position: fixed;
@@ -14,7 +31,24 @@
     min-height: 480px;
     width: 100%;
     height: 100%;
-    background: #a60303;
+    // background: #a60303;
+    background: #2C2B2B;
+    opacity: 1 ;
+    -webkit-animation:fadeOut ease-in 1; 
+    -moz-animation:fadeOut ease-in 1;
+    animation:  waitandhide ;
+
+    -webkit-animation-fill-mode:forwards; 
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:$loadingAnimationDuration;
+    -moz-animation-duration:$loadingAnimationDuration;
+    animation-duration:$loadingAnimationDuration;
+
+    -webkit-animation-delay: $loadingAnimationDealy;
+    -moz-animation-delay: $loadingAnimationDealy;
+    animation-delay: $loadingAnimationDealy;
 }
 
 .ip-header h1 {
@@ -78,7 +112,7 @@
 .loading .ip-loader {
     opacity: 1;
     -webkit-animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
-    animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
+    animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1 ) both;
 }
 
 .loading .ip-loader {
@@ -144,6 +178,7 @@
 
 /* Header animation when loading finishes */
 .loaded .ip-header {
+    opacity: $loaderOpactiy;
     -webkit-animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
     animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
 }

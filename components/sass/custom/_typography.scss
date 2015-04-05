@@ -55,6 +55,8 @@ p {
     font-size: $p_size;
     line-height: $p_line_height;
     color: $p_color;
+    text-align: justify;
+    text-indent: 30px;
 }
 
 p.bold{
