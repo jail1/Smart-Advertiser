@@ -208,23 +208,23 @@
 
                     <div class="col-md-6 col-sm-6 col-xs-12 text-center" data-scroll-reveal="enter right move over 1s after 0.2s">
                         <div id="result"></div>
-                        <form method="post" action="../contact.php" name="contactform" id="contactform">
+                        <form name="contactform" id="contactform">
 
                             <fieldset id="contact_form">
                                 <label for="name">
-                                    <input type="text" name="name" id="name" placeholder="Introdu nunmele">
+                                    <input required="true" type="text" name="name" id="name" placeholder="Introdu nunmele">
                                 </label>
 
                                 <label for="email">
-                                    <input type="email" name="email" id="email" placeholder="Introdu E-mail">
+                                    <input required="true" type="email" name="email" id="email" placeholder="Introdu E-mail">
                                 </label>
 
                                 <label for="phone">
-                                    <input type="text" name="phone" id="phone" placeholder="Introdu numar telefon">
+                                    <input required="true" type="text" name="phone" id="phone" placeholder="Introdu numar telefon">
                                 </label>
 
                                 <label for="comments">
-                                    <textarea name="comments" id="comments" placeholder="Mesajul tau"></textarea>
+                                    <textarea required="true" name="comments" id="comments" placeholder="Mesajul tau"></textarea>
                                 </label>
 
                                 <input type="submit" class="submit btn btn-default btn-black" id="submit" value="Trimite">
@@ -341,6 +341,7 @@
         <script type="text/javascript" src="../js/scripts.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js"></script>
         <script type="text/javascript" src="../js/custom.js"></script>
+        <script type="text/javascript" src="../js/contact-ajax.js"></script>
         <script type="text/javascript" src="../js/googleMapInit.js"></script>
 
 	</body>
