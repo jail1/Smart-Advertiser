@@ -9,14 +9,24 @@
 
 #pricing{
     background-color: $pricing_background;
+    margin-top: 100px;
 }
 
+#pricing .container{
+    padding-top:50px;
+}
 .tableWrapper{
     padding:60px;
     border: $pricing_table_wrapper_border;
     margin-bottom: 20px;
 }
-
+.priceNavbar li>a{
+    color: $navbar_color !important;
+}
+.priceNavbar li>a:hover{
+    color: $white !important;
+    background-color: transparent !important;
+}
 .tableWrapper .separator{
     padding:20px;
     margin-top:20px;

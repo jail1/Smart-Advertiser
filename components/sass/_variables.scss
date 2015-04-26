@@ -23,7 +23,8 @@ $links_text_decoration: none;
 
 $footer_bottomLine_background: rgba(89, 2, 2, 0.95);
 $footer_topLine_background: rgba(89, 2, 2, 0.7);
-
+https://jcwolf:parolagithub@github.com/jail1/Smart-Advertiser.git/
+git remote set-url origin https://jcwolf:parolagithub94@github.com/jail1/Smart-Advertiser.git/
 
 	//Tools
 
@@ -53,8 +54,8 @@ $general_btn_border_top: 2px solid transparent;
 $general_btn_border_bottom: 2px solid transparent;
 
 $btn_default_background: #d90404;
-$btn_default_color: #d90404;
-
+// $btn_default_color: #d90404;
+$btn_default_color: white;
 $btn_black_background: #a60303;
 $btn_black_color: #a60303;
 
@@ -73,9 +74,10 @@ $navbar_color: #f24405;
 $navbar_links: #a60303;
 
 $navbar_event_background: transparent;
-$navbar_event_color: #590202;
+$navbar_event_color: #fff;
+$navbar_event_bg_color: #F24405;
 
-$affix_background: rgba(89, 2, 2, .8);
+$affix_background: rgba(120, 2, 2, 1);
 
 $dropdown_background: #323232;
 $dropdown_align: left;
@@ -116,7 +118,7 @@ $p_weight: 700;
 
 	//Text Separator
 
-$text-separator-background: rgba(89, 2, 2, 0.8);
+$text-separator-background: rgba(120, 2, 2, 1);
 $text-separator-color: #e7e7e7;
 $time-wrapper-color: #d5d5d5;
 
@@ -131,7 +133,7 @@ $about_progress_border: 3px solid #590202;
 $about_progress_border_rad: 1px;
 $progress_bar_background: #f24405;
 
-$about_background: rgba(255, 255, 255, 0.80);
+$about_background: rgba(255, 255, 255, 1);
 $about_icon-color: #f5f5f5;
 
 $progress_bar_transition: width .6s ease;
@@ -139,11 +141,11 @@ $progress_bar_color: #ffffff;
 
 	//Portfolio Section
 
-$portfolio_intro_border: solid 5px #282828;
+$portfolio_intro_border: solid 5px white;
 $portfolio_intro_padding: 25px 50px;
 $portfolio_background: #f8f8f8;
 $portfolio-intro-url: '../img/portfolioIntro.jpg';
-$portfolio_filters_background: rgba(89, 2, 2, .8);
+$portfolio_filters_background: rgba(120, 2, 2, 1);
 $gallery-background: #4c4c4c;
 
 	//Team Section
@@ -166,10 +168,10 @@ $clients_h3_letter_spacing: 10px;
 $service_box_separator_width: 100px;
 $service_box_separator_max_width: 100px;
 
-$services_h2_span_border: solid 6px rgba(89, 2, 2, .8);
+$services_h2_span_border: solid 6px rgba(120, 2, 2, 1);
 $service_box_i_font_size: 9em;
 $intro_service_box_background_url: '../img/backgroundService.jpg';
-$white_box_background: #dac6c6;
+$white_box_background: #fff;
 $black_box_background: #282828;
 $black_box_i_color: $white;
 $services_simple_background: $white;

@@ -9,10 +9,12 @@
 
 #team {
     background: $white;
+    margin-top: 100px;
 }
 
 #team .container{
     padding-bottom:0;
+    padding-top: 100px;
 }
 
 #team .owl-buttons div {
@@ -52,6 +54,10 @@
     letter-spacing:0;
 }
 
+.memberDescription {
+    padding-right: 45px !important;
+    text-align: justify;
+}
 .memberDescription .position{
     margin-top:10px;
     margin-bottom:40px;

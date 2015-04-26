@@ -88,7 +88,7 @@ if(env === 'development') {
 					 'components/scripts/contact-ajax.js'
 					 ],
 
- 	sassSources	  = ['components/sass/**/**/**/*.scss', 'components/sass/*.scss', 'components/sass/**/*.scss', 'components/sass/**/**/*.scss'],
+ 	sassSources	  = ['components/sass/custom/*.scss','components/sass/**/**/**/*.scss', 'components/sass/*.scss', 'components/sass/**/*.scss', 'components/sass/**/**/*.scss'],
  	staticSources = [outputDir + '*.html', outputDir + 'pages/*.html'];
 
 // ##################################################################################################################################
@@ -197,6 +197,7 @@ gulp.task('watch', function() {
 	gulp.watch(jsSources, ['js', 'js-lint']);
 	gulp.watch(jsSources, ['js2', 'js-lint']);
 	gulp.watch('components/sass/*.scss', ['compass']);
+	gulp.watch('components/sass/custom/*.scss', ['compass']);
 	gulp.watch('builds/development/*.html', ['static']);
 	gulp.watch('builds/development/pages/*.html', ['static2']);
 	gulp.watch('builds/development/img/**/*.*', ['images']);

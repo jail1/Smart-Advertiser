@@ -9,6 +9,14 @@
 
 #contact{
     background: white;
+    margin-top: 100px;
+}
+
+#contact .container{
+    padding-top: 100px;
+}
+#contact .container .sectionIntro p{
+    text-align: center;
 }
 
 label{
@@ -133,7 +141,7 @@ label input, textarea{
 }
 
 #footer .bottomLine p{
-    color: #a5a5a5;
+    color: white;
     font-size:12px;
 }
 
@@ -149,7 +157,7 @@ label input, textarea{
 }
 
 .footerText p{
-    color: #a5a5a5
+    color: white
 }
 
 
@@ -190,7 +198,7 @@ label input, textarea{
 #footer .infoContact {
     list-style: none;
     padding: 10px;
-    color: #a5a5a5
+    color: white
 }
 
 #footer .infoContact li .fa {
@@ -220,7 +228,7 @@ label input, textarea{
 }
 
 .footerSocialIcons li a{
-    color: #a5a5a5;
+    color: white;
 }
 
 .bottomLine p{

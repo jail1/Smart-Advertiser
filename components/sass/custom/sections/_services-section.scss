@@ -31,6 +31,9 @@
 .serviceBox h2 span{
     padding: 25px 50px;
     border: $services_h2_span_border;
+    border-color: #fff;
+    color: white;
+
 }
 
 .serviceBox i{
@@ -40,7 +43,7 @@
 .introServiceBox{
     position:relative;
     z-index:2;
-    background:url($intro_service_box_background_url) no-repeat center center;
+    // background:url($intro_service_box_background_url) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -63,6 +66,9 @@
 
 #servicesSimple{
     background: $services_simple_background;
+}
+#services{
+    margin-top: 50px;
 }
 
 .serviceIconWrapper{

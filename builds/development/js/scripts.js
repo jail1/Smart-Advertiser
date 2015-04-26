@@ -15839,7 +15839,6 @@ function() {
 					progress = Math.min( progress + Math.random() * 0.1, 1 );
 
 					instance.setProgress( progress );
-
 					// reached the end
 					if( progress === 1 ) {
 						classie.remove( container, 'loading' );
