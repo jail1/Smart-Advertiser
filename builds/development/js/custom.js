@@ -186,7 +186,6 @@ $(document).ready(function () {
         singleItem:	true,
         autoPlay:	true,
         navigation: true,
-        autoPlay: 5000,
         navigationText: [
             "<i class='fa fa-angle-left fa-4x'></i>",
             "<i class='fa fa-angle-right fa-4x'></i>"

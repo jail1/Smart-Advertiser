@@ -10067,6 +10067,23 @@ section .container {
   transition: all 0.5s ease 0.25s;
 }
 
+.navbar-brand {
+  float: left;
+}
+.navbar-brand img {
+  width: 80px;
+  float: right;
+  margin-top: -30px;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+  -webkit-transition: 1s cubic-bezier(0.5, 1, 0.75, 1);
+  transition: 1s cubic-bezier(0.5, 1, 0.75, 1);
+}
+.navbar-brand:hover > img {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg), translateY(-10px);
+}
+
 .navbar-default .navbar-brand {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
