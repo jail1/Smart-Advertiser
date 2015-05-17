@@ -75,6 +75,7 @@ if(env === 'development') {
 			 	 	 'components/scripts/external/smooth-scroll.js',
 			 	 	 'components/scripts/external/stellar.js',
 			 	 	 'components/scripts/external/waypoints.js',
+			 	 	 'components/scripts/custom.js',
 
 		 	 	 	 // Project JavaScript components.
 				 	 'components/scripts/preloader.js'],

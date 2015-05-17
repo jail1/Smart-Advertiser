@@ -10,7 +10,7 @@
         return e(this).each(function() {
             function a() {
                 o += r;
-                s++;
+                s++; 
                 e(i).html(o.toFixed(t.decimals));
                 if (typeof t.onUpdate == "function") {
                     t.onUpdate.call(i, o)

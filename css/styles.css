@@ -2637,8 +2637,9 @@ th {
     display: none;
   }
 
-  .btn > .caret,
-  .dropup > .btn > .caret {
+  .btn > .caret, .shopping-cart .shopping-btn > .caret,
+  .dropup > .btn > .caret,
+  .shopping-cart .dropup > .shopping-btn > .caret {
     border-top-color: #000 !important;
   }
 
@@ -5533,41 +5534,49 @@ input[type="search"] {
   }
   input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control,
   .input-group-sm > input[type="date"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="date"].btn, .input-group-sm input[type="date"],
+  .input-group-sm > .input-group-btn > input[type="date"].btn,
+  .shopping-cart .input-group-sm > .input-group-btn > input[type="date"].shopping-btn, .input-group-sm input[type="date"],
   input[type="time"].input-sm,
   .input-group-sm > input[type="time"].form-control,
   .input-group-sm > input[type="time"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="time"].btn, .input-group-sm
+  .input-group-sm > .input-group-btn > input[type="time"].btn,
+  .shopping-cart .input-group-sm > .input-group-btn > input[type="time"].shopping-btn, .input-group-sm
   input[type="time"],
   input[type="datetime-local"].input-sm,
   .input-group-sm > input[type="datetime-local"].form-control,
   .input-group-sm > input[type="datetime-local"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn, .input-group-sm
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
+  .shopping-cart .input-group-sm > .input-group-btn > input[type="datetime-local"].shopping-btn, .input-group-sm
   input[type="datetime-local"],
   input[type="month"].input-sm,
   .input-group-sm > input[type="month"].form-control,
   .input-group-sm > input[type="month"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="month"].btn, .input-group-sm
+  .input-group-sm > .input-group-btn > input[type="month"].btn,
+  .shopping-cart .input-group-sm > .input-group-btn > input[type="month"].shopping-btn, .input-group-sm
   input[type="month"] {
     line-height: 30px;
   }
   input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control,
   .input-group-lg > input[type="date"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="date"].btn, .input-group-lg input[type="date"],
+  .input-group-lg > .input-group-btn > input[type="date"].btn,
+  .shopping-cart .input-group-lg > .input-group-btn > input[type="date"].shopping-btn, .input-group-lg input[type="date"],
   input[type="time"].input-lg,
   .input-group-lg > input[type="time"].form-control,
   .input-group-lg > input[type="time"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="time"].btn, .input-group-lg
+  .input-group-lg > .input-group-btn > input[type="time"].btn,
+  .shopping-cart .input-group-lg > .input-group-btn > input[type="time"].shopping-btn, .input-group-lg
   input[type="time"],
   input[type="datetime-local"].input-lg,
   .input-group-lg > input[type="datetime-local"].form-control,
   .input-group-lg > input[type="datetime-local"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn, .input-group-lg
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
+  .shopping-cart .input-group-lg > .input-group-btn > input[type="datetime-local"].shopping-btn, .input-group-lg
   input[type="datetime-local"],
   input[type="month"].input-lg,
   .input-group-lg > input[type="month"].form-control,
   .input-group-lg > input[type="month"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="month"].btn, .input-group-lg
+  .input-group-lg > .input-group-btn > input[type="month"].btn,
+  .shopping-cart .input-group-lg > .input-group-btn > input[type="month"].shopping-btn, .input-group-lg
   input[type="month"] {
     line-height: 46px;
   }
@@ -5650,16 +5659,19 @@ input[type="checkbox"] {
 }
 .form-control-static.input-lg, .input-group-lg > .form-control-static.form-control,
 .input-group-lg > .form-control-static.input-group-addon,
-.input-group-lg > .input-group-btn > .form-control-static.btn, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control,
+.input-group-lg > .input-group-btn > .form-control-static.btn,
+.shopping-cart .input-group-lg > .input-group-btn > .form-control-static.shopping-btn, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control,
 .input-group-sm > .form-control-static.input-group-addon,
-.input-group-sm > .input-group-btn > .form-control-static.btn {
+.input-group-sm > .input-group-btn > .form-control-static.btn,
+.shopping-cart .input-group-sm > .input-group-btn > .form-control-static.shopping-btn {
   padding-left: 0;
   padding-right: 0;
 }
 
 .input-sm, .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .btn {
+.input-group-sm > .input-group-btn > .btn,
+.shopping-cart .input-group-sm > .input-group-btn > .shopping-btn {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -5669,7 +5681,8 @@ input[type="checkbox"] {
 
 select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > select.input-group-addon,
-.input-group-sm > .input-group-btn > select.btn {
+.input-group-sm > .input-group-btn > select.btn,
+.shopping-cart .input-group-sm > .input-group-btn > select.shopping-btn {
   height: 30px;
   line-height: 30px;
 }
@@ -5677,10 +5690,12 @@ select.input-sm, .input-group-sm > select.form-control,
 textarea.input-sm, .input-group-sm > textarea.form-control,
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
+.shopping-cart .input-group-sm > .input-group-btn > textarea.shopping-btn,
 select[multiple].input-sm,
 .input-group-sm > select[multiple].form-control,
 .input-group-sm > select[multiple].input-group-addon,
-.input-group-sm > .input-group-btn > select[multiple].btn {
+.input-group-sm > .input-group-btn > select[multiple].btn,
+.shopping-cart .input-group-sm > .input-group-btn > select[multiple].shopping-btn {
   height: auto;
 }
 
@@ -5709,7 +5724,8 @@ select[multiple].input-sm,
 
 .input-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn {
+.input-group-lg > .input-group-btn > .btn,
+.shopping-cart .input-group-lg > .input-group-btn > .shopping-btn {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -5719,7 +5735,8 @@ select[multiple].input-sm,
 
 select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
-.input-group-lg > .input-group-btn > select.btn {
+.input-group-lg > .input-group-btn > select.btn,
+.shopping-cart .input-group-lg > .input-group-btn > select.shopping-btn {
   height: 46px;
   line-height: 46px;
 }
@@ -5727,10 +5744,12 @@ select.input-lg, .input-group-lg > select.form-control,
 textarea.input-lg, .input-group-lg > textarea.form-control,
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
+.shopping-cart .input-group-lg > .input-group-btn > textarea.shopping-btn,
 select[multiple].input-lg,
 .input-group-lg > select[multiple].form-control,
 .input-group-lg > select[multiple].input-group-addon,
-.input-group-lg > .input-group-btn > select[multiple].btn {
+.input-group-lg > .input-group-btn > select[multiple].btn,
+.shopping-cart .input-group-lg > .input-group-btn > select[multiple].shopping-btn {
   height: auto;
 }
 
@@ -5779,7 +5798,8 @@ select[multiple].input-lg,
 
 .input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback,
 .input-group-lg > .input-group-addon + .form-control-feedback,
-.input-group-lg > .input-group-btn > .btn + .form-control-feedback {
+.input-group-lg > .input-group-btn > .btn + .form-control-feedback,
+.shopping-cart .input-group-lg > .input-group-btn > .shopping-btn + .form-control-feedback {
   width: 46px;
   height: 46px;
   line-height: 46px;
@@ -5787,7 +5807,8 @@ select[multiple].input-lg,
 
 .input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback,
 .input-group-sm > .input-group-addon + .form-control-feedback,
-.input-group-sm > .input-group-btn > .btn + .form-control-feedback {
+.input-group-sm > .input-group-btn > .btn + .form-control-feedback,
+.shopping-cart .input-group-sm > .input-group-btn > .shopping-btn + .form-control-feedback {
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -5983,7 +6004,7 @@ select[multiple].input-lg,
   }
 }
 
-.btn {
+.btn, .shopping-cart .shopping-btn {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -6003,22 +6024,22 @@ select[multiple].input-lg,
   -ms-user-select: none;
   user-select: none;
 }
-.btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+.btn:focus, .shopping-cart .shopping-btn:focus, .btn.focus, .shopping-cart .focus.shopping-btn, .btn:active:focus, .shopping-cart .shopping-btn:active:focus, .btn:active.focus, .shopping-cart .shopping-btn:active.focus, .btn.active:focus, .shopping-cart .active.shopping-btn:focus, .btn.active.focus, .shopping-cart .active.focus.shopping-btn {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-.btn:hover, .btn:focus, .btn.focus {
+.btn:hover, .shopping-cart .shopping-btn:hover, .btn:focus, .shopping-cart .shopping-btn:focus, .btn.focus, .shopping-cart .focus.shopping-btn {
   color: #333333;
   text-decoration: none;
 }
-.btn:active, .btn.active {
+.btn:active, .shopping-cart .shopping-btn:active, .btn.active, .shopping-cart .active.shopping-btn {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+.btn.disabled, .shopping-cart .disabled.shopping-btn, .btn[disabled], .shopping-cart [disabled].shopping-btn, fieldset[disabled] .btn, fieldset[disabled] .shopping-cart .shopping-btn, .shopping-cart fieldset[disabled] .shopping-btn {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -6182,21 +6203,21 @@ select[multiple].input-lg,
   text-decoration: none;
 }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, .shopping-cart .btn-group-lg > .shopping-btn {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
   border-radius: 6px;
 }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .shopping-cart .btn-group-sm > .shopping-btn {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
 }
 
-.btn-xs, .btn-group-xs > .btn {
+.btn-xs, .btn-group-xs > .btn, .shopping-cart .btn-group-xs > .shopping-btn {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -6409,22 +6430,31 @@ tbody.collapse.in {
   display: inline-block;
   vertical-align: middle;
 }
-.btn-group > .btn,
-.btn-group-vertical > .btn {
+.btn-group > .btn, .shopping-cart .btn-group > .shopping-btn,
+.btn-group-vertical > .btn,
+.shopping-cart .btn-group-vertical > .shopping-btn {
   position: relative;
   float: left;
 }
-.btn-group > .btn:hover, .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+.btn-group > .btn:hover, .shopping-cart .btn-group > .shopping-btn:hover, .btn-group > .btn:focus, .shopping-cart .btn-group > .shopping-btn:focus, .btn-group > .btn:active, .shopping-cart .btn-group > .shopping-btn:active, .btn-group > .btn.active, .shopping-cart .btn-group > .active.shopping-btn,
 .btn-group-vertical > .btn:hover,
+.shopping-cart .btn-group-vertical > .shopping-btn:hover,
 .btn-group-vertical > .btn:focus,
+.shopping-cart .btn-group-vertical > .shopping-btn:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active {
+.shopping-cart .btn-group-vertical > .shopping-btn:active,
+.btn-group-vertical > .btn.active,
+.shopping-cart .btn-group-vertical > .active.shopping-btn {
   z-index: 2;
 }
 
-.btn-group .btn + .btn,
+.btn-group .btn + .btn, .btn-group .shopping-cart .shopping-btn + .btn, .shopping-cart .btn-group .shopping-btn + .btn, .btn-group .shopping-cart .btn + .shopping-btn, .shopping-cart .btn-group .btn + .shopping-btn, .btn-group .shopping-cart .shopping-btn + .shopping-btn, .shopping-cart .btn-group .shopping-btn + .shopping-btn,
 .btn-group .btn + .btn-group,
+.btn-group .shopping-cart .shopping-btn + .btn-group,
+.shopping-cart .btn-group .shopping-btn + .btn-group,
 .btn-group .btn-group + .btn,
+.btn-group .shopping-cart .btn-group + .shopping-btn,
+.shopping-cart .btn-group .btn-group + .shopping-btn,
 .btn-group .btn-group + .btn-group {
   margin-left: -1px;
 }
@@ -6443,25 +6473,25 @@ tbody.collapse.in {
 .btn-toolbar .input-group {
   float: left;
 }
-.btn-toolbar > .btn,
+.btn-toolbar > .btn, .shopping-cart .btn-toolbar > .shopping-btn,
 .btn-toolbar > .btn-group,
 .btn-toolbar > .input-group {
   margin-left: 5px;
 }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .shopping-cart .btn-group > .shopping-btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
-.btn-group > .btn:first-child {
+.btn-group > .btn:first-child, .shopping-cart .btn-group > .shopping-btn:first-child {
   margin-left: 0;
 }
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .shopping-cart .btn-group > .shopping-btn:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.btn-group > .btn:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .shopping-cart .btn-group > .shopping-btn:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -6471,17 +6501,17 @@ tbody.collapse.in {
   float: left;
 }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .shopping-cart .btn-group > .btn-group:not(:first-child):not(:last-child) > .shopping-btn {
   border-radius: 0;
 }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .shopping-cart .btn-group > .btn-group:first-child:not(:last-child) > .shopping-btn:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .shopping-cart .btn-group > .btn-group:last-child:not(:first-child) > .shopping-btn:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -6491,12 +6521,12 @@ tbody.collapse.in {
   outline: 0;
 }
 
-.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, .shopping-cart .btn-group > .shopping-btn + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .shopping-cart .btn-group-lg.btn-group > .shopping-btn + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -6510,22 +6540,23 @@ tbody.collapse.in {
   box-shadow: none;
 }
 
-.btn .caret {
+.btn .caret, .shopping-cart .shopping-btn .caret {
   margin-left: 0;
 }
 
-.btn-lg .caret, .btn-group-lg > .btn .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, .shopping-cart .btn-group-lg > .shopping-btn .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0;
 }
 
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .shopping-cart .btn-group-lg > .shopping-btn .caret, .shopping-cart .dropup .btn-group-lg > .shopping-btn .caret {
   border-width: 0 5px 5px;
 }
 
-.btn-group-vertical > .btn,
+.btn-group-vertical > .btn, .shopping-cart .btn-group-vertical > .shopping-btn,
 .btn-group-vertical > .btn-group,
-.btn-group-vertical > .btn-group > .btn {
+.btn-group-vertical > .btn-group > .btn,
+.shopping-cart .btn-group-vertical > .btn-group > .shopping-btn {
   display: block;
   float: none;
   width: 100%;
@@ -6538,42 +6569,44 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group:after {
   clear: both;
 }
-.btn-group-vertical > .btn-group > .btn {
+.btn-group-vertical > .btn-group > .btn, .shopping-cart .btn-group-vertical > .btn-group > .shopping-btn {
   float: none;
 }
-.btn-group-vertical > .btn + .btn,
+.btn-group-vertical > .btn + .btn, .shopping-cart .btn-group-vertical > .shopping-btn + .btn, .shopping-cart .btn-group-vertical > .btn + .shopping-btn, .shopping-cart .btn-group-vertical > .shopping-btn + .shopping-btn,
 .btn-group-vertical > .btn + .btn-group,
+.shopping-cart .btn-group-vertical > .shopping-btn + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
+.shopping-cart .btn-group-vertical > .btn-group + .shopping-btn,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0;
 }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .shopping-cart .btn-group-vertical > .shopping-btn:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
-.btn-group-vertical > .btn:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .shopping-cart .btn-group-vertical > .shopping-btn:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .shopping-cart .btn-group-vertical > .shopping-btn:last-child:not(:first-child) {
   border-bottom-left-radius: 4px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .shopping-cart .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .shopping-btn {
   border-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .shopping-cart .btn-group-vertical > .btn-group:first-child:not(:last-child) > .shopping-btn:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .shopping-cart .btn-group-vertical > .btn-group:last-child:not(:first-child) > .shopping-btn:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -6584,23 +6617,26 @@ tbody.collapse.in {
   table-layout: fixed;
   border-collapse: separate;
 }
-.btn-group-justified > .btn,
+.btn-group-justified > .btn, .shopping-cart .btn-group-justified > .shopping-btn,
 .btn-group-justified > .btn-group {
   float: none;
   display: table-cell;
   width: 1%;
 }
-.btn-group-justified > .btn-group .btn {
+.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .shopping-cart .shopping-btn, .shopping-cart .btn-group-justified > .btn-group .shopping-btn {
   width: 100%;
 }
 .btn-group-justified > .btn-group .dropdown-menu {
   left: auto;
 }
 
-[data-toggle="buttons"] > .btn input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], .shopping-cart [data-toggle="buttons"] > .shopping-btn input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
+.shopping-cart [data-toggle="buttons"] > .shopping-btn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
-[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"] {
+.shopping-cart [data-toggle="buttons"] > .btn-group > .shopping-btn input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
+.shopping-cart [data-toggle="buttons"] > .btn-group > .shopping-btn input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
@@ -6655,14 +6691,16 @@ tbody.collapse.in {
 }
 .input-group-addon.input-sm,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .input-group-addon.btn {
+.input-group-sm > .input-group-btn > .input-group-addon.btn,
+.shopping-cart .input-group-sm > .input-group-btn > .input-group-addon.shopping-btn {
   padding: 5px 10px;
   font-size: 12px;
   border-radius: 3px;
 }
 .input-group-addon.input-lg,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .input-group-addon.btn {
+.input-group-lg > .input-group-btn > .input-group-addon.btn,
+.shopping-cart .input-group-lg > .input-group-btn > .input-group-addon.shopping-btn {
   padding: 10px 16px;
   font-size: 18px;
   border-radius: 6px;
@@ -6675,10 +6713,14 @@ tbody.collapse.in {
 .input-group .form-control:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
+.shopping-cart .input-group-btn:first-child > .shopping-btn,
 .input-group-btn:first-child > .btn-group > .btn,
+.shopping-cart .input-group-btn:first-child > .btn-group > .shopping-btn,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+.shopping-cart .input-group-btn:last-child > .shopping-btn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
+.shopping-cart .input-group-btn:last-child > .btn-group:not(:last-child) > .shopping-btn {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -6690,10 +6732,14 @@ tbody.collapse.in {
 .input-group .form-control:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
+.shopping-cart .input-group-btn:last-child > .shopping-btn,
 .input-group-btn:last-child > .btn-group > .btn,
+.shopping-cart .input-group-btn:last-child > .btn-group > .shopping-btn,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
-.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+.shopping-cart .input-group-btn:first-child > .shopping-btn:not(:first-child),
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
+.shopping-cart .input-group-btn:first-child > .btn-group:not(:first-child) > .shopping-btn {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -6707,20 +6753,20 @@ tbody.collapse.in {
   font-size: 0;
   white-space: nowrap;
 }
-.input-group-btn > .btn {
+.input-group-btn > .btn, .shopping-cart .input-group-btn > .shopping-btn {
   position: relative;
 }
-.input-group-btn > .btn + .btn {
+.input-group-btn > .btn + .btn, .shopping-cart .input-group-btn > .shopping-btn + .btn, .shopping-cart .input-group-btn > .btn + .shopping-btn, .shopping-cart .input-group-btn > .shopping-btn + .shopping-btn {
   margin-left: -1px;
 }
-.input-group-btn > .btn:hover, .input-group-btn > .btn:focus, .input-group-btn > .btn:active {
+.input-group-btn > .btn:hover, .shopping-cart .input-group-btn > .shopping-btn:hover, .input-group-btn > .btn:focus, .shopping-cart .input-group-btn > .shopping-btn:focus, .input-group-btn > .btn:active, .shopping-cart .input-group-btn > .shopping-btn:active {
   z-index: 2;
 }
-.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn, .shopping-cart .input-group-btn:first-child > .shopping-btn,
 .input-group-btn:first-child > .btn-group {
   margin-right: -1px;
 }
-.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn, .shopping-cart .input-group-btn:last-child > .shopping-btn,
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
@@ -7210,11 +7256,11 @@ tbody.collapse.in {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
+.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .shopping-cart .btn-group-sm > .navbar-btn.shopping-btn {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
+.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .shopping-cart .btn-group-xs > .navbar-btn.shopping-btn {
   margin-top: 14px;
   margin-bottom: 14px;
 }
@@ -7581,7 +7627,7 @@ tbody.collapse.in {
 .label:empty {
   display: none;
 }
-.btn .label {
+.btn .label, .shopping-cart .shopping-btn .label {
   position: relative;
   top: -1px;
 }
@@ -7651,11 +7697,11 @@ a.label:hover, a.label:focus {
 .badge:empty {
   display: none;
 }
-.btn .badge {
+.btn .badge, .shopping-cart .shopping-btn .badge {
   position: relative;
   top: -1px;
 }
-.btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .btn .badge {
+.btn-xs .badge, .btn-group-xs > .btn .badge, .shopping-cart .btn-group-xs > .shopping-btn .badge, .btn-group-xs > .btn .badge, .shopping-cart .btn-group-xs > .shopping-btn .badge {
   top: 0;
   padding: 1px 5px;
 }
@@ -8690,11 +8736,11 @@ button.close {
 .modal-footer:after {
   clear: both;
 }
-.modal-footer .btn + .btn {
+.modal-footer .btn + .btn, .modal-footer .shopping-cart .shopping-btn + .btn, .shopping-cart .modal-footer .shopping-btn + .btn, .modal-footer .shopping-cart .btn + .shopping-btn, .shopping-cart .modal-footer .btn + .shopping-btn, .modal-footer .shopping-cart .shopping-btn + .shopping-btn, .shopping-cart .modal-footer .shopping-btn + .shopping-btn {
   margin-left: 5px;
   margin-bottom: 0;
 }
-.modal-footer .btn-group .btn + .btn {
+.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .shopping-cart .shopping-btn + .btn, .shopping-cart .modal-footer .btn-group .shopping-btn + .btn, .modal-footer .btn-group .shopping-cart .btn + .shopping-btn, .shopping-cart .modal-footer .btn-group .btn + .shopping-btn, .modal-footer .btn-group .shopping-cart .shopping-btn + .shopping-btn, .shopping-cart .modal-footer .btn-group .shopping-btn + .shopping-btn {
   margin-left: -1px;
 }
 .modal-footer .btn-block + .btn-block {
@@ -9158,7 +9204,7 @@ button.close {
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
-.carousel-caption .btn {
+.carousel-caption .btn, .carousel-caption .shopping-cart .shopping-btn, .shopping-cart .carousel-caption .shopping-btn {
   text-shadow: none;
 }
 
@@ -10089,7 +10135,7 @@ section .container {
   left: 10%;
 }
 
-.btn {
+.btn, .shopping-cart .shopping-btn {
   background: transparent;
   border-radius: 0;
   border: 0;
@@ -10117,7 +10163,7 @@ section .container {
   border-color: white;
 }
 
-.btn:after, .btn:before {
+.btn:after, .shopping-cart .shopping-btn:after, .btn:before, .shopping-cart .shopping-btn:before {
   -webkit-transition: all 0.2s ease 0.1s;
   transition: all 0.2s ease 0.1s;
   content: '';
@@ -10128,19 +10174,19 @@ section .container {
   background: white;
 }
 
-.btn:before {
+.btn:before, .shopping-cart .shopping-btn:before {
   left: -8px;
 }
 
-.btn:hover:before {
+.btn:hover:before, .shopping-cart .shopping-btn:hover:before {
   left: 0;
 }
 
-.btn:after {
+.btn:after, .shopping-cart .shopping-btn:after {
   right: -8px;
 }
 
-.btn:hover:after {
+.btn:hover:after, .shopping-cart .shopping-btn:hover:after {
   right: 0;
 }
 
@@ -10150,14 +10196,14 @@ section .container {
   border-color: white;
 }
 
-.btn:active, .btn.active {
+.btn:active, .shopping-cart .shopping-btn:active, .btn.active, .shopping-cart .active.shopping-btn {
   background-image: none;
   outline: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-.btn:focus, .btn:active:focus, .btn.active:focus {
+.btn:focus, .shopping-cart .shopping-btn:focus, .btn:active:focus, .shopping-cart .shopping-btn:active:focus, .btn.active:focus, .shopping-cart .active.shopping-btn:focus {
   outline: 0;
 }
 
@@ -10187,6 +10233,7 @@ section .container {
 
 .navbar-brand {
   float: left;
+  font-size: 15px;
 }
 .navbar-brand img {
   width: 80px;
@@ -10607,7 +10654,7 @@ p.bold {
   padding-top: 30px;
 }
 
-#filters .btn {
+#filters .btn, #filters .shopping-cart .shopping-btn, .shopping-cart #filters .shopping-btn {
   margin: 20px;
 }
 
@@ -11125,7 +11172,7 @@ p.bold {
 }
 
 #pricing {
-  background-color: #f4f4f4;
+  background-color: white;
   margin-top: 100px;
 }
 
@@ -11568,7 +11615,7 @@ ul, ol {
   margin: 15px 0;
 }
 
-.post-content .btn {
+.post-content .btn, .post-content .shopping-cart .shopping-btn, .shopping-cart .post-content .shopping-btn {
   font-size: 10px;
   padding: 0px 10px;
   line-height: 30px;
@@ -12395,3 +12442,84 @@ div.jqi .jqisubstate .jqibuttons button {
   }
 }
 /*iPhone Portrait Mode and Very Small Mobile Phones*/
+.shopping-cart {
+  position: fixed;
+  right: 0;
+  top: 140px;
+  color: #000;
+  background-color: #eee;
+  border: 1px solid #A60303;
+  border-right: none;
+  z-index: 1000;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  padding: 7px;
+  overflow: hidden;
+  font-size: 20px;
+  cursor: pointer;
+  right: -50px;
+  user-select: none;
+  transition: all 0.5s cubic-bezier(0.94, 0.23, 0, 1.04);
+  max-width: 130px;
+  max-height: 37px;
+}
+.shopping-cart > i {
+  font-size: 22px;
+}
+.shopping-cart hr {
+  margin: 5px;
+}
+.shopping-cart .shopping-cart-header {
+  transition: all 0.5s cubic-bezier(0.94, 0.23, 0, 1.04);
+  animation-delay: 0.5s;
+  text-align: center;
+  display: inline-block;
+  width: 65px;
+  border-bottom: 1px solid #A60303;
+}
+.shopping-cart .shopping-cart-body {
+  background-color: #fff;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+.shopping-cart .shopping-cart-footer {
+  background-color: #fff;
+  text-align: center;
+}
+.shopping-cart:hover {
+  max-height: 100%;
+  max-width: 100%;
+  right: 0;
+}
+.shopping-cart:hover .shopping-cart-header {
+  color: black;
+  width: 100%;
+}
+.shopping-cart .shopping-btn {
+  color: #fff;
+  background-color: #A60303;
+  padding: 5px 10px;
+  font-size: 13px;
+  text-align: right;
+  line-height: normal;
+  transition: all 0.2s cubic-bezier(0.94, 0.23, 0, 1.04);
+}
+.shopping-cart .shopping-btn:hover {
+  background-color: #F34805;
+}
+.shopping-cart .shopping-btn:after {
+  width: 0;
+}
+.shopping-cart .shopping-btn:before {
+  width: 0;
+}
+.shopping-cart table tr td, .shopping-cart table tr th {
+  text-align: center;
+}
+.shopping-cart table tr td:first-child, .shopping-cart table tr th:first-child {
+  text-align: left;
+}
+.shopping-cart table tr td i, .shopping-cart table tr th i {
+  font-size: 25px;
+}
