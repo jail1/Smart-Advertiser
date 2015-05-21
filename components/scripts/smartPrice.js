@@ -1,4 +1,4 @@
-angular.module('smartPrice', ['ngAnimate'])
+angular.module('smartPrice', [])
 
 .controller('smartPriceController', ['$scope', function($scope) {
 	$scope.products = {
@@ -8,7 +8,7 @@ angular.module('smartPrice', ['ngAnimate'])
 		"Catalog":             ["€ 250,00 ",	"€ 300,00 ",	"€ 320,00 ",	"€ 350,00 "	],
 		"Mapa de prezentare ": ["€ 15,00 ",	 	"€ 20,00 ",		"€ 40,00 ",		"€ 50,00 "	],
 		"Flyer":               ["€ 25,00 ",		"€ 30,00 ",		"€ 40,00 ",		"€ 50,00 "	],
-		"Roll-up ":            ["€ 150,00 ",	"€ 175,00 ",	"€ 200,00 ",	"€ 250,00 "	],
+		"Roll-up":            ["€ 150,00 ",	"€ 175,00 ",	"€ 200,00 ",	"€ 250,00 "	],
 		"People stopper":      ["€ 45,00 ",		"€ 50,00 ",		"€ 65,00 ",		"€ 80,00 "	],
 		"Poster":              ["€ 75,00 ",		"€ 100,00 ",	"€ 120,00 ",	"€ 150,00 "	],
 		"Window stiker":      ["€ 20,00 ",		"€ 25,00 ",		"€ 35,00 ",		"€ 45,00 "	],
@@ -27,7 +27,7 @@ angular.module('smartPrice', ['ngAnimate'])
 		"Catalog":             "caret-square-o-up ",          
 		"Mapa de prezentare ": "leanpub",
 		"Flyer":               "building",         
-		"Roll-up ":            "rocket",
+		"Roll-up":            "rocket",
 		"People stopper":      "deviantart",         
 		"Poster":              "archive",
 		"Window stiker":      "windows",         
@@ -74,10 +74,6 @@ angular.module('smartPrice', ['ngAnimate'])
 	$scope.productName = "Selectează produse! ";
 
 
-	// get data from local storage
-	console.log(localStorage.products|| "[]");
-	$scope.data = JSON.parse(localStorage.products|| "[]");
-
 	$scope.getProduct = function(key){
 		$scope.productName = key;
 		$scope.product     = $scope.products[key];
@@ -87,7 +83,8 @@ angular.module('smartPrice', ['ngAnimate'])
 		$scope.totalPrice = 0;
 		for( var i = 0; i < $scope.data.length; i++){
 			var price = $scope.products[ $scope.data[i][0] ][ $scope.data[i][1] ];
-			$scope.totalPrice += parseFloat(price.replace(/^\D+/g,''));;
+			var quant = $scope.data[i][2];
+			$scope.totalPrice += parseFloat(price.replace(/^\D+/g,'')) * quant ;
 		}
 		// $scope.totalPrice = $scope.totalPrice.toFixed(2) ;
 		return $scope.totalPrice;
@@ -117,10 +114,37 @@ angular.module('smartPrice', ['ngAnimate'])
 			$scope.totalPrice -= price;
 			$scope.taken[$scope.productName][key] = 0;
 		}
-
-		$scope.data.push([ $scope.productName,key ]);
+		$scope.data.push([ $scope.productName,key,1 ]);
 		localStorage.products = JSON.stringify($scope.data);
 	}
 
+	// get data from local storage
+	$scope.data           = JSON.parse(localStorage.products|| "[]");
+
+	for(i in $scope.data){
+		productName = $scope.data[i][0];
+		key = $scope.data[i][1];
+		if(!$scope.taken[ productName ])
+			$scope.taken[ productName ] = [];
+
+		if(!$scope.taken[productName][key])
+			$scope.taken[productName][key] = 1;
+	}
+
+
 }]);
 
+function onlynumbers(event) {
+	if( event.ctrlKey || event.altKey
+		|| (47<event.keyCode && event.keyCode<58 && event.shiftKey==false)
+		|| (95<event.keyCode && event.keyCode<106)
+		|| (event.keyCode==8) || (event.keyCode==9)
+		|| (event.keyCode>=34 && event.keyCode<=40)
+		|| (event.keyCode==46)
+		|| (event.keyCode==110)
+		|| (event.keyCode==190)
+		|| (event.keyCode==189)
+		)
+		return true;
+	event.preventDefault();
+}

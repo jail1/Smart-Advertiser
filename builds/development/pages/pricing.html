@@ -37,7 +37,10 @@
 				data-offset = "100"
 				data-ng-app = "smartPrice" data-ng-controller="smartPriceController"
 				>
-				<div class="shopping-cart">
+				<div class="shopping-cart" 
+					ng-class="{'showDetails' : details == true}"
+					>
+
 					<div class="shopping-cart-header">
 						<i class="fa fa-shopping-cart"></i>
 						COS
@@ -48,6 +51,7 @@
 								<tr>
 									<th>Produs</th>
 									<th>Tip</th>
+									<th class="hiddenTD">Cantitate</th>
 									<th>Pret</th>
 								</tr>
 							</thead>
@@ -55,8 +59,7 @@
 								<tr>
 									<th>Total</th>
 									<th></th>
-									<th>€ {{ getTotalPrice() | number:2}}</th>
-									<th></th>
+									<th colspan="3">€ {{ getTotalPrice() | number:2}}</th>
 								</tr>
 							</tfoot>
 							<tbody>
@@ -68,6 +71,12 @@
 									<td>
 										{{ boxes[val[1]].name }}
 									</td>
+									<td class="hiddenTD">
+										<input type="text" ng-model="val[2]"
+												onkeydown = "onlynumbers(event)" 
+												ng-change = "getTotalPrice()" 
+												ng-value  = "{{ val[2] }}">
+									</td>
 									<td>{{ products[val[0]][val[1]] }}</td>
 									<td>
 										<span class="shopping-btn" ng-click="removeProduct(key)">X</span>
@@ -75,13 +84,22 @@
 								</tr>
 							</tbody>
 						</table>
+
+						<div class="hiddenTR">Email</div>
+						<div class="hiddenTR"><input type="text" class="input" name="email" id="email"></div>
+
 						<div class="shopping-cart-footer">
-							<button class="btn btn-black">Cumpara</button>
+							<button class="shopping-btn" ng-show="!details" ng-click="details=true">
+								Detalii
+							</button>
+							<button class="shopping-btn" ng-show="details" ng-click="details=false">
+								Inchide
+							</button>
 						</div>
 
 					</div>
 				</div>
-
+				
 				<header>
 						<nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="50">
 								<div class="container-fluid">
@@ -265,11 +283,8 @@
 														</div>
 
 														<div class="rating">
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star-half-o"></i>
-																<i class="fa fa-star-o"></i>
+																<i ng-repeat="value in [1,2,3,4,5]" ng-class="{'fa fa-star': (value-1) <= key}"></i>
+																<i ng-repeat="value in [1,2,3,4,5]" ng-class="{'fa fa-star-o': (value-1) > key}"></i>
 														</div>
 
 
@@ -284,7 +299,7 @@
 
 														<a class="btn btn-default btn-success" ng-click="processProduct(key)" ng-show="!taken[productName][key]">Adaugă în coș</a>                       
 
-														<a class="btn btn-default btn-success" ng-click="processProduct(key)" ng-show="taken[productName][key]">Scoate din coș</a>
+														<a class="btn btn-default btn-success" ng-click="removeProduct(key)" ng-show="taken[productName][key]">Scoate din coș</a>
 
 												</div>
 

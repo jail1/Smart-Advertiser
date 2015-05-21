@@ -12442,6 +12442,25 @@ div.jqi .jqisubstate .jqibuttons button {
   }
 }
 /*iPhone Portrait Mode and Very Small Mobile Phones*/
+::-webkit-scrollbar {
+  opacity: 0.7;
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #BEBEBE;
+  border-radius: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 30px;
+  background-color: #A60303;
+  border-radius: 15px;
+}
+
 .shopping-cart {
   position: fixed;
   right: 0;
@@ -12454,14 +12473,19 @@ div.jqi .jqisubstate .jqibuttons button {
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
   padding: 7px;
+  padding-top: 0px;
   overflow: hidden;
   font-size: 20px;
   cursor: pointer;
   right: -50px;
   user-select: none;
-  transition: all 0.5s cubic-bezier(0.94, 0.23, 0, 1.04);
+  transition: all 0.5s ease-in-out;
+  width: 410px;
   max-width: 130px;
-  max-height: 37px;
+  max-height: 30px;
+}
+.shopping-cart * {
+  transition: all 0.5s ease-in-out;
 }
 .shopping-cart > i {
   font-size: 22px;
@@ -12470,7 +12494,7 @@ div.jqi .jqisubstate .jqibuttons button {
   margin: 5px;
 }
 .shopping-cart .shopping-cart-header {
-  transition: all 0.5s cubic-bezier(0.94, 0.23, 0, 1.04);
+  transition: all 0.5s ease-in-out;
   animation-delay: 0.5s;
   text-align: center;
   display: inline-block;
@@ -12482,19 +12506,25 @@ div.jqi .jqisubstate .jqibuttons button {
   padding: 5px;
   font-size: 14px;
   text-align: center;
+  height: 0px;
+  overflow: hidden;
 }
 .shopping-cart .shopping-cart-footer {
   background-color: #fff;
   text-align: center;
 }
 .shopping-cart:hover {
-  max-height: 100%;
+  overflow-y: auto;
+  max-height: 80%;
   max-width: 100%;
   right: 0;
 }
 .shopping-cart:hover .shopping-cart-header {
   color: black;
   width: 100%;
+}
+.shopping-cart:hover .shopping-cart-body {
+  height: 100%;
 }
 .shopping-cart .shopping-btn {
   color: #fff;
@@ -12503,9 +12533,10 @@ div.jqi .jqisubstate .jqibuttons button {
   font-size: 13px;
   text-align: right;
   line-height: normal;
-  transition: all 0.2s cubic-bezier(0.94, 0.23, 0, 1.04);
+  transition: all 0.2s linear;
 }
 .shopping-cart .shopping-btn:hover {
+  color: #fff;
   background-color: #F34805;
 }
 .shopping-cart .shopping-btn:after {
@@ -12513,6 +12544,27 @@ div.jqi .jqisubstate .jqibuttons button {
 }
 .shopping-cart .shopping-btn:before {
   width: 0;
+}
+.shopping-cart .hiddenTD input {
+  width: 50px;
+  text-align: center;
+}
+.shopping-cart .hiddenTD {
+  display: block;
+  width: 0px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  transition: all 0.7s ease-in;
+}
+.shopping-cart .hiddenTR {
+  display: inline-block;
+  height: 0px;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.7s ease-in;
 }
 .shopping-cart table tr td, .shopping-cart table tr th {
   text-align: center;
@@ -12522,4 +12574,27 @@ div.jqi .jqisubstate .jqibuttons button {
 }
 .shopping-cart table tr td i, .shopping-cart table tr th i {
   font-size: 25px;
+}
+.shopping-cart.showDetails {
+  overflow-y: auto;
+  max-height: 80%;
+  max-width: 100%;
+  width: 600px;
+  right: 50%;
+  margin-right: -300px;
+  border-right: 1px solid #A60303;
+  border-radius: 15px;
+}
+.shopping-cart.showDetails .hiddenTD {
+  width: 70px;
+}
+.shopping-cart.showDetails .hiddenTR {
+  height: 50px;
+}
+.shopping-cart.showDetails .shopping-cart-header {
+  color: black;
+  width: 100%;
+}
+.shopping-cart.showDetails .shopping-cart-body {
+  height: 100%;
 }
